@@ -1,0 +1,6 @@
+{
+  "extends": "@atlassian-partner-engineering",
+  "rules": {
+    "no-console": "off"
+  }
+}

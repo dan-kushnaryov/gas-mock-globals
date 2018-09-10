@@ -1,0 +1,45 @@
+{
+  "name": "gas-mock-service",
+  "version": "1.0.7",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "test": "jest .",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "gas",
+    "google-apps-script",
+    "library",
+    "mock"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dan-kushnaryov/google-apps-script-services.git"
+  },
+  "author": "Danil Kushnaryov",
+  "jest": {
+    "modulePaths": [
+      "node_modules",
+      "."
+    ]
+  },
+  "devDependencies": {
+    "@atlassian-partner-engineering/eslint-config": "^2.0.0",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-member-expression-literals": "^7.0.0",
+    "@babel/plugin-transform-property-literals": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-jest": "^23.4.2",
+    "eslint": "^5.4.0",
+    "jest": "^23.5.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
+}

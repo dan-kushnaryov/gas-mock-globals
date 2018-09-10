@@ -1,0 +1,9 @@
+.idea/
+.vscode
+.DS_store
+*.iml
+*.log
+.*.swp
+.clasp.json
+node_modules/
+dist
