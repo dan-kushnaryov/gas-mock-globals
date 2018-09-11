@@ -1,7 +1,7 @@
 {
   "name": "gas-mock-service",
   "version": "1.0.7",
-  "description": "",
+  "description": "A library that mocks Google Apps Script Services",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
