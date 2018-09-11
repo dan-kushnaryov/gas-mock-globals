@@ -26,17 +26,18 @@
     ]
   },
   "devDependencies": {
-    "@atlassian-partner-engineering/eslint-config": "^2.0.0",
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
-    "babel-core": "^7.0.0-bridge.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/plugin-transform-member-expression-literals": "^7.0.0",
     "@babel/plugin-transform-property-literals": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.4.2",
-    "eslint": "^5.4.0",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "jest": "^23.5.0"
   },
   "dependencies": {
