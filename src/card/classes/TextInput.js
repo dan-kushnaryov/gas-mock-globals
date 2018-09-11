@@ -1,5 +1,5 @@
-import Widget from './Widget'
-import Action from './Action'
+const Widget = require('./Widget')
+const Action = require('./Action')
 
 class TextInput extends Widget {
   setFieldName (fieldName) {
@@ -43,4 +43,4 @@ class TextInput extends Widget {
   }
 }
 
-export default TextInput
+module.exports = TextInput

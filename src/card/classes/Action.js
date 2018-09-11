@@ -1,4 +1,4 @@
-import BaseClass from '../../helpers/BaseClass'
+const BaseClass = require('../../helpers/BaseClass')
 
 class Action extends BaseClass {
   setFunctionName (functionName) {
@@ -14,4 +14,4 @@ class Action extends BaseClass {
   }
 }
 
-export default Action
+module.exports = Action

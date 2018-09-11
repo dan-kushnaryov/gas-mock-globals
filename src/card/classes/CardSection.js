@@ -1,7 +1,7 @@
-import BaseClass from '../../helpers/BaseClass'
-import Widget from './Widget'
-import Button from './Button'
-import ButtonSet from './ButtonSet'
+const BaseClass = require('../../helpers/BaseClass')
+const Widget = require('./Widget')
+const Button = require('./Button')
+const ButtonSet = require('./ButtonSet')
 
 class CardSection extends BaseClass {
   constructor () {
@@ -44,4 +44,4 @@ class CardSection extends BaseClass {
   }
 }
 
-export default CardSection
+module.exports = CardSection

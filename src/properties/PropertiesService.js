@@ -1,4 +1,4 @@
-import Properties from './classes/Properties'
+const Properties = require('./classes/Properties')
 
 class PropertiesService {
   static getDocumentProperties () {
@@ -14,4 +14,4 @@ class PropertiesService {
   }
 }
 
-export default PropertiesService
+module.exports = PropertiesService

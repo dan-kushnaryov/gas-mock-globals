@@ -1,4 +1,4 @@
-import Properties from '../../../src/properties/classes/Properties'
+const Properties = require('../../../src/properties/classes/Properties')
 
 describe('Properties', () => {
   let properties

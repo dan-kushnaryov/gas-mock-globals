@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "test": "jest .",
+    "test": "jest",
     "lint": "eslint ."
   },
   "keywords": [
@@ -34,9 +34,9 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "jest": "^23.5.0"
+    "jest": "^23.6.0"
   },
   "dependencies": {
-    "lodash": "^4.17.10"
+    "lodash.set": "^4.3.2"
   }
 }

@@ -1,7 +1,6 @@
-import set from 'lodash/set'
-
-import OpenLink from './OpenLink'
-import BaseClass from '../../helpers/BaseClass'
+const set = require('lodash.set')
+const OpenLink = require('./OpenLink')
+const BaseClass = require('../../helpers/BaseClass')
 
 class CardAction extends BaseClass {
   setText (text) {
@@ -21,4 +20,4 @@ class CardAction extends BaseClass {
   }
 }
 
-export default CardAction
+module.exports = CardAction

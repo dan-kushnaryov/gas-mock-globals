@@ -1,5 +1,5 @@
-import Widget from './Widget'
-import Button from './Button'
+const Widget = require('./Widget')
+const Button = require('./Button')
 
 class ButtonSet extends Widget {
   constructor () {
@@ -18,4 +18,4 @@ class ButtonSet extends Widget {
   }
 }
 
-export default ButtonSet
+module.exports = ButtonSet

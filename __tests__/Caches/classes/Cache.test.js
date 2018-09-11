@@ -1,4 +1,4 @@
-import Cache from '../../../src/cache/classes/Cache'
+const Cache = require('../../../src/cache/classes/Cache')
 
 describe('Cache', () => {
   let cache

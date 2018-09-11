@@ -8,4 +8,4 @@ class BaseClass {
   }
 }
 
-export default BaseClass
+module.exports = BaseClass

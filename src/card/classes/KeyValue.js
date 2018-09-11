@@ -1,8 +1,8 @@
-import set from 'lodash/set'
+const set = require('lodash.set')
 
-import Action from './Action'
-import Widget from './Widget'
-import Button from './Button'
+const Action = require('./Action')
+const Widget = require('./Widget')
+const Button = require('./Button')
 
 class KeyValue extends Widget {
   setIconUrl (iconUrl) {
@@ -65,4 +65,4 @@ class KeyValue extends Widget {
   }
 }
 
-export default KeyValue
+module.exports = KeyValue

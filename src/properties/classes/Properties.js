@@ -41,4 +41,4 @@ class Properties {
   }
 }
 
-export default Properties
+module.exports = Properties

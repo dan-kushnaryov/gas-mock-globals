@@ -1,4 +1,4 @@
-import CardHeader from '../../../src/card/classes/CardHeader'
+const CardHeader = require('../../../src/card/classes/CardHeader')
 
 describe('CardHeader', () => {
   it('Should set the title', () => {
