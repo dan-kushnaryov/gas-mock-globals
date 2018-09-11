@@ -4,11 +4,13 @@ describe('Properties', () => {
   let properties
 
   beforeEach(() => {
-    properties = Object.assign(new Properties(), { _data: {
-      key1: 'value1',
-      key2: 'value2',
-      key3: 'value3',
-    } })
+    properties = Object.assign(new Properties(), {
+      _data: {
+        key1: 'value1',
+        key2: 'value2',
+        key3: 'value3',
+      }
+    })
   })
 
   it('Should get the property by key', () => {

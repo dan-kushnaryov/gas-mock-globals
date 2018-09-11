@@ -1,8 +1,0 @@
-{
-  "presets": ["@babel/env"],
-  "plugins": [
-    "@babel/plugin-transform-member-expression-literals",
-    "@babel/plugin-transform-property-literals",
-    "@babel/plugin-proposal-object-rest-spread"
-  ]
-}
