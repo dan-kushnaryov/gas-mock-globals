@@ -1,4 +1,4 @@
-import Widget from './Widget'
+const Widget = require('./Widget')
 
 class SelectionInput extends Widget {
   constructor () {
@@ -31,4 +31,4 @@ class SelectionInput extends Widget {
   }
 }
 
-export default SelectionInput
+module.exports = SelectionInput

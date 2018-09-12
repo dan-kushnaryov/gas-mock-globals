@@ -1,4 +1,4 @@
-import Widget from './Widget'
+const Widget = require('./Widget')
 
 class Image extends Widget {
   setImageUrl (url) {
@@ -8,4 +8,4 @@ class Image extends Widget {
   }
 }
 
-export default Image
+module.exports = Image

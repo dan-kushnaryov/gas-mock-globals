@@ -1,26 +1,26 @@
 // classes
-import CardHeader from './classes/CardHeader'
-import CardBuilder from './classes/CardBuilder'
-import CardSection from './classes/CardSection'
-import Action from './classes/Action'
-import AuthorizationAction from './classes/AuthorizationAction'
-import KeyValue from './classes/KeyValue'
-import TextButton from './classes/TextButton'
-import ImageButton from './classes/ImageButton'
-import OpenLink from './classes/OpenLink'
-import ButtonSet from './classes/ButtonSet'
-import CardAction from './classes/CardAction'
-import TextParagraph from './classes/TextParagraph'
-import TextInput from './classes/TextInput'
-import SelectionInput from './classes/SelectionInput'
-import Image from './classes/Image'
-import UniversalActionResponseBuilder from './classes/UniversalActionResponseBuilder'
+const CardHeader = require('./classes/CardHeader')
+const CardBuilder = require('./classes/CardBuilder')
+const CardSection = require('./classes/CardSection')
+const Action = require('./classes/Action')
+const AuthorizationAction = require('./classes/AuthorizationAction')
+const KeyValue = require('./classes/KeyValue')
+const TextButton = require('./classes/TextButton')
+const ImageButton = require('./classes/ImageButton')
+const OpenLink = require('./classes/OpenLink')
+const ButtonSet = require('./classes/ButtonSet')
+const CardAction = require('./classes/CardAction')
+const TextParagraph = require('./classes/TextParagraph')
+const TextInput = require('./classes/TextInput')
+const SelectionInput = require('./classes/SelectionInput')
+const Image = require('./classes/Image')
+const UniversalActionResponseBuilder = require('./classes/UniversalActionResponseBuilder')
 
 // enums
-import ImageStyle from './enums/ImageStyle'
-import Icon from './enums/Icon'
-import OpenAs from './enums/OpenAs'
-import SelectionInputType from './enums/SelectionInputType'
+const ImageStyle = require('./enums/ImageStyle')
+const Icon = require('./enums/Icon')
+const OpenAs = require('./enums/OpenAs')
+const SelectionInputType = require('./enums/SelectionInputType')
 
 class CardService {
   static newCardHeader () {
@@ -104,4 +104,4 @@ class CardService {
   }
 }
 
-export default CardService
+module.exports = CardService

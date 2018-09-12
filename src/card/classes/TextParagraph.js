@@ -1,4 +1,4 @@
-import Widget from './Widget'
+const Widget = require('./Widget')
 
 class TextParagraph extends Widget {
   setText (text) {
@@ -8,4 +8,4 @@ class TextParagraph extends Widget {
   }
 }
 
-export default TextParagraph
+module.exports = TextParagraph

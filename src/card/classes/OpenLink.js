@@ -1,4 +1,4 @@
-import BaseClass from '../../helpers/BaseClass'
+const BaseClass = require('../../helpers/BaseClass')
 
 class OpenLink extends BaseClass {
   setUrl (url) {
@@ -14,4 +14,4 @@ class OpenLink extends BaseClass {
   }
 }
 
-export default OpenLink
+module.exports = OpenLink

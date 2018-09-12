@@ -1,4 +1,4 @@
-import BaseClass from '../../helpers/BaseClass'
+const BaseClass = require('../../helpers/BaseClass')
 
 class UniversalActionResponseBuilder extends BaseClass {
   displayAddOnCards (cards = []) {
@@ -12,4 +12,4 @@ class UniversalActionResponseBuilder extends BaseClass {
   }
 }
 
-export default UniversalActionResponseBuilder
+module.exports = UniversalActionResponseBuilder

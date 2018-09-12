@@ -1,1 +1,4 @@
-export default { SQUARE: 'SQUARE', CIRCLE: 'CIRCLE' }
+module.exports = {
+  SQUARE: 'SQUARE',
+  CIRCLE: 'CIRCLE',
+}

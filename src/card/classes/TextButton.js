@@ -1,6 +1,6 @@
-import set from 'lodash/set'
-import Button from './Button'
-import AuthorizationAction from './AuthorizationAction'
+const set = require('lodash.set')
+const Button = require('./Button')
+const AuthorizationAction = require('./AuthorizationAction')
 
 class TextButton extends Button {
   setText (text) {
@@ -24,4 +24,4 @@ class TextButton extends Button {
   }
 }
 
-export default TextButton
+module.exports = TextButton

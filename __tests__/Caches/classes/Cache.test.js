@@ -1,14 +1,16 @@
-import Cache from '../../../src/cache/classes/Cache'
+const Cache = require('../../../src/cache/classes/Cache')
 
 describe('Cache', () => {
   let cache
 
   beforeEach(() => {
-    cache = Object.assign(new Cache(), { _data: {
-      key1: 'value1',
-      key2: 'value2',
-      key3: 'value3',
-    } })
+    cache = Object.assign(new Cache(), {
+      _data: {
+        key1: 'value1',
+        key2: 'value2',
+        key3: 'value3',
+      }
+    })
   })
 
   it('Should get all of the properties in cache', () => {
