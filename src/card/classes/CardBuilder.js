@@ -1,4 +1,4 @@
-import Card from './Card'
+const Card = require('./Card')
 
 class CardBuilder {
   constructor () {
@@ -28,4 +28,4 @@ class CardBuilder {
   }
 }
 
-export default CardBuilder
+module.exports = CardBuilder

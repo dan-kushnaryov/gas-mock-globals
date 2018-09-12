@@ -1,7 +1,7 @@
-import CardHeader from './CardHeader'
-import CardSection from './CardSection'
-import CardAction from './CardAction'
-import BaseClass from '../../helpers/BaseClass'
+const CardHeader = require('./CardHeader')
+const CardSection = require('./CardSection')
+const CardAction = require('./CardAction')
+const BaseClass = require('../../helpers/BaseClass')
 
 class Card extends BaseClass {
   constructor () {
@@ -39,4 +39,4 @@ class Card extends BaseClass {
   }
 }
 
-export default Card
+module.exports = Card

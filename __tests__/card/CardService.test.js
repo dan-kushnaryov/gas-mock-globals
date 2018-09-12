@@ -1,4 +1,4 @@
-import {
+const {
   CardService,
   CardHeader,
   CardBuilder,
@@ -16,7 +16,7 @@ import {
   SelectionInput,
   Image,
   UniversalActionResponseBuilder
-} from '../../src'
+} = require('../../src')
 
 describe('CardService', () => {
   it('it should return the new instance of classes.CardHeader', () => {

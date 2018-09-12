@@ -1,4 +1,4 @@
-import Cache from './classes/Cache'
+const Cache = require('./classes/Cache')
 
 class CacheService {
   static getDocumentationCache () {
@@ -14,4 +14,4 @@ class CacheService {
   }
 }
 
-export default CacheService
+module.exports = CacheService

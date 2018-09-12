@@ -1,5 +1,5 @@
-import BaseClass from '../../helpers/BaseClass'
+const BaseClass = require('../../helpers/BaseClass')
 
 class Widget extends BaseClass {}
 
-export default Widget
+module.exports = Widget

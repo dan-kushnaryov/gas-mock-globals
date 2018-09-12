@@ -1,6 +1,6 @@
-import set from 'lodash/set'
-import Button from './Button'
-import OpenLink from './OpenLink'
+const set = require('lodash.set')
+const Button = require('./Button')
+const OpenLink = require('./OpenLink')
 
 class ImageButton extends Button {
   setIconUrl (url) {
@@ -20,4 +20,4 @@ class ImageButton extends Button {
   }
 }
 
-export default ImageButton
+module.exports = ImageButton

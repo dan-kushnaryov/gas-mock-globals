@@ -1,8 +1,8 @@
-import set from 'lodash/set'
+const set = require('lodash.set')
 
-import OpenLink from './OpenLink'
-import Action from './Action'
-import Widget from './Widget'
+const OpenLink = require('./OpenLink')
+const Action = require('./Action')
+const Widget = require('./Widget')
 
 class Button extends Widget {
   setOnClickAction (onClickAction) {
@@ -26,4 +26,4 @@ class Button extends Widget {
   }
 }
 
-export default Button
+module.exports = Button

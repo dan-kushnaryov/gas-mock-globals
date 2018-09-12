@@ -1,4 +1,4 @@
-import BaseClass from '../../helpers/BaseClass'
+const BaseClass = require('../../helpers/BaseClass')
 
 class CardHeader extends BaseClass {
   setTitle (title) {
@@ -26,4 +26,4 @@ class CardHeader extends BaseClass {
   }
 }
 
-export default CardHeader
+module.exports = CardHeader

@@ -6,4 +6,4 @@ class UrlFetchApp {
   }
 }
 
-export default UrlFetchApp
+module.exports = UrlFetchApp

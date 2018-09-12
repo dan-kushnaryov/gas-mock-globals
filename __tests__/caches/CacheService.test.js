@@ -1,5 +1,5 @@
-import Cache from '../../src/cache/classes/Cache'
-import CacheService from '../../src/cache/CacheService'
+const Cache = require('../../src/cache/classes/Cache')
+const CacheService = require('../../src/cache/CacheService')
 
 describe('CacheService', () => {
   it('it should return the new instance of classes.Cache', () => {

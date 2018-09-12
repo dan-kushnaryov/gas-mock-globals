@@ -1,4 +1,4 @@
-import BaseClass from '../../helpers/BaseClass'
+const BaseClass = require('../../helpers/BaseClass')
 
 class AuthorizationAction extends BaseClass {
   setAuthorizationUrl (authorizationUrl) {
@@ -8,4 +8,4 @@ class AuthorizationAction extends BaseClass {
   }
 }
 
-export default AuthorizationAction
+module.exports = AuthorizationAction
