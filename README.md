@@ -44,10 +44,14 @@ It accumulates data which can be useful for writing tests and debugging the code
     * UniversalActionResponseBuilder
     * Widget
   * Enums:
-    * Icon
-    * ImageStyle
-    * OpenAs
-    * SelectionInputType
+    * [ComposedEmailType](https://developers.google.com/apps-script/reference/card-service/composed-email-type)
+    * [Icon](https://developers.google.com/apps-script/reference/card-service/icon)
+    * [ImageStyle](https://developers.google.com/apps-script/reference/card-service/image-style)
+    * [LoadIndicator](https://developers.google.com/apps-script/reference/card-service/load-indicator)
+    * [NotificationType](https://developers.google.com/apps-script/reference/card-service/notification-type)
+    * [OnClose](https://developers.google.com/apps-script/reference/card-service/on-close)
+    * [OpenAs](https://developers.google.com/apps-script/reference/card-service/open-as)
+    * [SelectionInputType](https://developers.google.com/apps-script/reference/card-service/selection-input-type)
 * [PropertiesService:](https://developers.google.com/apps-script/reference/properties/properties-service)
   * Classes:
     * Properties
