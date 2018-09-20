@@ -1,16 +1,27 @@
 const set = require('lodash.set')
 
+const AuthorizationAction = require('./AuthorizationAction')
 const OpenLink = require('./OpenLink')
 const Action = require('./Action')
 const Widget = require('./Widget')
 
 class Button extends Widget {
-  setOnClickAction (onClickAction) {
-    if ((onClickAction instanceof Action) === false) {
+  setAuthorizationAction (action) {
+    if ((action instanceof AuthorizationAction) === false) {
+      throw new Error('Invalid value passed for "setAuthorizationAction"')
+    }
+
+    set(this._data, 'onClick.action', action.getData())
+
+    return this
+  }
+
+  setOnClickAction (action) {
+    if ((action instanceof Action) === false) {
       throw new Error('Invalid value passed for "setOnClickAction"')
     }
 
-    set(this._data, 'onClick.action', onClickAction.getData())
+    set(this._data, 'onClick.action', action.getData())
 
     return this
   }

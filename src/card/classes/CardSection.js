@@ -9,24 +9,6 @@ class CardSection extends BaseClass {
     this._data.widgets = []
   }
 
-  setCollapsible (collapsible) {
-    this._data.collapsible = collapsible
-
-    return this
-  }
-
-  setNumUncollapsibleWidgets (uncollapsiblewidgetsNum) {
-    this._data.uncollapsiblewidgetsNum = uncollapsiblewidgetsNum
-
-    return this
-  }
-
-  setHeader (header) {
-    this._data.header = header
-
-    return this
-  }
-
   addWidget (widget) {
     if ((widget instanceof Widget) === false) {
       throw new Error('Invalid value passed for "addWidget"')
@@ -39,6 +21,24 @@ class CardSection extends BaseClass {
     } else {
       this._data.widgets.push(widget.getData())
     }
+
+    return this
+  }
+
+  setCollapsible (collapsible) {
+    this._data.collapsible = collapsible
+
+    return this
+  }
+
+  setHeader (header) {
+    this._data.header = header
+
+    return this
+  }
+
+  setNumUncollapsibleWidgets (uncollapsiblewidgetsNum) {
+    this._data.uncollapsiblewidgetsNum = uncollapsiblewidgetsNum
 
     return this
   }

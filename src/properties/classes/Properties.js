@@ -3,27 +3,8 @@ class Properties {
     this._data = {}
   }
 
-  getProperty (key) {
-    return this._data[key] || null
-  }
-
-  getProperties () {
-    return this._data
-  }
-
-  getKeys () {
-    return Object.keys(this._data)
-  }
-
-  setProperty (key, value) {
-    this._data[key] = value
-
-    return this
-  }
-
-  setProperties (properties = {}, deleteAllOthers = false) {
-    this._data = Object
-      .assign(deleteAllOthers ? {} : this._data, properties)
+  deleteAllProperties () {
+    this._data = {}
 
     return this
   }
@@ -34,8 +15,27 @@ class Properties {
     return this
   }
 
-  deleteAllProperties () {
-    this._data = {}
+  getKeys () {
+    return Object.keys(this._data)
+  }
+
+  getProperties () {
+    return this._data
+  }
+
+  getProperty (key) {
+    return this._data[key] || null
+  }
+
+  setProperties (properties = {}, deleteAllOthers = false) {
+    this._data = Object
+      .assign(deleteAllOthers ? {} : this._data, properties)
+
+    return this
+  }
+
+  setProperty (key, value) {
+    this._data[key] = value
 
     return this
   }

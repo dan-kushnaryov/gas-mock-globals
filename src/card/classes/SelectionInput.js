@@ -6,14 +6,14 @@ class SelectionInput extends Widget {
     this._data.items = []
   }
 
-  setFieldName (fieldName) {
-    this._data.text = fieldName
+  addItem (text, value, selected) {
+    this._data.items.push({ text, value, selected })
 
     return this
   }
 
-  setType (type) {
-    this._data.type = type
+  setFieldName (fieldName) {
+    this._data.text = fieldName
 
     return this
   }
@@ -24,8 +24,8 @@ class SelectionInput extends Widget {
     return this
   }
 
-  addItem (text, value, selected) {
-    this._data.items.push({ text, value, selected })
+  setType (type) {
+    this._data.type = type
 
     return this
   }
