@@ -7,6 +7,12 @@ class Action extends BaseClass {
     return this
   }
 
+  setLoadIndicator (loadIndicator) {
+    this._data.actionMethodName = loadIndicator
+
+    return this
+  }
+
   setParameters (parameters) {
     this._data.parameters = parameters
 

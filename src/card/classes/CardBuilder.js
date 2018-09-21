@@ -5,8 +5,8 @@ class CardBuilder {
     this._card = new Card()
   }
 
-  setHeader (header) {
-    this._card.setHeader(header)
+  addCardAction (cardAction) {
+    this._card.addCardAction(cardAction)
 
     return this
   }
@@ -17,14 +17,14 @@ class CardBuilder {
     return this
   }
 
-  addCardAction (cardAction) {
-    this._card.addCardAction(cardAction)
-
-    return this
-  }
-
   build () {
     return this._card
+  }
+
+  setHeader (header) {
+    this._card.setHeader(header)
+
+    return this
   }
 }
 

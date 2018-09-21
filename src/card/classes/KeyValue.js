@@ -5,26 +5,29 @@ const Widget = require('./Widget')
 const Button = require('./Button')
 
 class KeyValue extends Widget {
-  setIconUrl (iconUrl) {
-    this._data.iconUrl = iconUrl
-
-    return this
-  }
-
-  setTopLabel (topLabel) {
-    this._data.topLabel = topLabel
-
-    return this
-  }
-
   setBottomLabel (bottomLabel) {
     this._data.bottomLabel = bottomLabel
 
     return this
   }
 
+  setButton (button) {
+    if ((button instanceof Button) === false) {
+      throw new Error('Invalid value passed for "setButton"')
+    }
+
+    this._data.textButton = button.getData()
+    return this
+  }
+
   setContent (content) {
     this._data.content = content
+
+    return this
+  }
+
+  setIconUrl (iconUrl) {
+    this._data.iconUrl = iconUrl
 
     return this
   }
@@ -51,12 +54,9 @@ class KeyValue extends Widget {
     return this
   }
 
-  setButton (button) {
-    if ((button instanceof Button) === false) {
-      throw new Error('Invalid value passed for "setButton"')
-    }
+  setTopLabel (topLabel) {
+    this._data.topLabel = topLabel
 
-    this._data.textButton = button.getData()
     return this
   }
 

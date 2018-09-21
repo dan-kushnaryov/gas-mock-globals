@@ -1,21 +1,10 @@
 const Widget = require('./Widget')
 const Action = require('./Action')
+const Suggestions = require('./Suggestions')
 
 class TextInput extends Widget {
   setFieldName (fieldName) {
     this._data.text = fieldName
-
-    return this
-  }
-
-  setMultiline (multiline) {
-    this._data.multiline = multiline
-
-    return this
-  }
-
-  setTitle (title) {
-    this._data.title = title
 
     return this
   }
@@ -26,8 +15,28 @@ class TextInput extends Widget {
     return this
   }
 
-  setValue (value) {
-    this._data.value = value
+  setMultiline (multiline) {
+    this._data.multiline = multiline
+
+    return this
+  }
+
+  setOnChangeAction (action) {
+    if ((action instanceof Action) === false) {
+      throw new Error('Invalid value passed for "setOnChangeAction"')
+    }
+
+    this._data.action = action
+
+    return this
+  }
+
+  setSuggestions (suggestions) {
+    if ((suggestions instanceof Suggestions) === false) {
+      throw new Error('Invalid value passed for "setSuggestionsAction"')
+    }
+
+    this._data.suggestions = suggestions
 
     return this
   }
@@ -38,6 +47,18 @@ class TextInput extends Widget {
     }
 
     this._data.suggestionsAction = suggestionsAction
+
+    return this
+  }
+
+  setTitle (title) {
+    this._data.title = title
+
+    return this
+  }
+
+  setValue (value) {
+    this._data.value = value
 
     return this
   }
