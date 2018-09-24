@@ -11,6 +11,18 @@ class CardBuilder {
     return this
   }
 
+  setName (name) {
+    this._card.setName(name)
+
+    return this
+  }
+
+  setHeader (header) {
+    this._card.setHeader(header)
+
+    return this
+  }
+
   addSection (section) {
     this._card.addSection(section)
 
@@ -19,12 +31,6 @@ class CardBuilder {
 
   build () {
     return this._card
-  }
-
-  setHeader (header) {
-    this._card.setHeader(header)
-
-    return this
   }
 }
 

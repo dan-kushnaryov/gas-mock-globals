@@ -3,6 +3,7 @@ const set = require('lodash.set')
 const Action = require('./Action')
 const Widget = require('./Widget')
 const Button = require('./Button')
+const OpenLink = require('./OpenLink')
 
 class KeyValue extends Widget {
   setBottomLabel (bottomLabel) {
@@ -17,6 +18,7 @@ class KeyValue extends Widget {
     }
 
     this._data.textButton = button.getData()
+
     return this
   }
 
@@ -49,7 +51,12 @@ class KeyValue extends Widget {
   }
 
   setOpenLink (openLink) {
-    this._data.openLink = openLink
+    if ((openLink instanceof OpenLink) === false) {
+      throw new Error('Invalid value passed for "setOpenLink"')
+    }
+
+    // TODO: check the name of the property
+    this._data.openLink = openLink.getData()
 
     return this
   }
