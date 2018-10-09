@@ -254,5 +254,22 @@ npm publish --access public
     * [`putAll(values, expirationInSeconds)`](https://developers.google.com/apps-script/reference/cache/cache#putAll(Object,Integer))
     * [**`remove(key)`**](https://developers.google.com/apps-script/reference/cache/cache#remove(String))
     * [**`removeAll(keys)`**](https://developers.google.com/apps-script/reference/cache/cache#removeAll(String))
+* [`UrlFetchApp`](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app)
+  *  [**`fetch(url)`**](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app#fetch(String))
+  *  [**`fetch(url, params)`**](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app#fetch(String,Object))
+  *  [**`fetchAll(requests)`**](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app#fetchallrequests)
+  *  [**`getRequest(url)`**](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app#getrequesturl)
+  *  [**`getRequest(url, params)`**](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app#getrequesturl-params)
+  
+  Classes:
+  * [`HttpResponse`](https://developers.google.com/apps-script/reference/url-fetch/http-response)
+    * [**`getAllHeaders()`**](https://developers.google.com/apps-script/reference/url-fetch/http-response#getAllHeaders())
+    * [**`getAs(contentType)`**](https://developers.google.com/apps-script/reference/url-fetch/http-response#getAs(String))
+    * [**`getBlob()`**](https://developers.google.com/apps-script/reference/url-fetch/http-response#getBlob())
+    * [`getContent()`](https://developers.google.com/apps-script/reference/url-fetch/http-response#getContent())
+    * [`getContentText()`](https://developers.google.com/apps-script/reference/url-fetch/http-response#getContentText())
+    * [`getContentText(charset)`](https://developers.google.com/apps-script/reference/url-fetch/http-response#getContentText(String))
+    * [`getHeaders()`](https://developers.google.com/apps-script/reference/url-fetch/http-response#getHeaders())
+    * [`getResponseCode()`](https://developers.google.com/apps-script/reference/url-fetch/http-response#getResponseCode())
 
 [^1]: All the `CardService` classes and their methods which are currently mocked in this library are marked as **bold**

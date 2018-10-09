@@ -1,8 +1,16 @@
-// TODO: implement the list of methods according to the documentation:
-// https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app
+const HttpResponse = require('./classes/HttpResponse')
+
 class UrlFetchApp {
-  fetch (url) {
-    return ''
+  fetch (url, params = {}) {
+    return new HttpResponse()
+  }
+
+  fetchAll (...requests) {
+    return [...Array(requests.length)].map(() => this.fetch())
+  }
+
+  getRequest (url, params = {}) {
+    return {}
   }
 }
 

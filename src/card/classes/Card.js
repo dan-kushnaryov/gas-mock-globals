@@ -10,12 +10,21 @@ class Card extends BaseClass {
     this._data.cardActions = []
   }
 
+  setName (name) {
+    // TODO: check the name of the property
+    this._data.name = name
+
+    return this
+  }
+
   setHeader (header) {
     if ((header instanceof CardHeader) === false) {
       throw new Error('Invalid value passed for "setHeader"')
     }
 
     this._data.header = header.getData()
+
+    return this
   }
 
   addSection (section) {
@@ -24,6 +33,8 @@ class Card extends BaseClass {
     }
 
     this._data.sections.push(section.getData())
+
+    return this
   }
 
   addCardAction (cardAction) {
@@ -32,6 +43,8 @@ class Card extends BaseClass {
     }
 
     this._data.cardActions.push(cardAction.getData())
+
+    return this
   }
 
   printJson () {
