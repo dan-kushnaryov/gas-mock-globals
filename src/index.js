@@ -3,6 +3,7 @@ const CardService = require('./card/CardService')
 const CacheService = require('./cache/CacheService')
 const PropertiesService = require('./properties/PropertiesService')
 const UrlFetchApp = require('./url-fetch/UrlFetchApp')
+const Session = require('./base/classes/Session')
 
 // Card Classes
 const Card = require('./card/classes/Card')
@@ -27,6 +28,7 @@ global.CardService = CardService
 global.CacheService = CacheService
 global.PropertiesService = PropertiesService
 global.UrlFetchApp = UrlFetchApp
+global.Session = Session
 
 module.exports = {
   CardService,
