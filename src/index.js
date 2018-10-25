@@ -1,4 +1,7 @@
 // Global Services
+const Utilities = require('./utilities/Utilities')
+const ScriptApp = require('./script/ScriptApp')
+const OAuth2 = require('./auth/OAuth2')
 const CardService = require('./card/CardService')
 const CacheService = require('./cache/CacheService')
 const PropertiesService = require('./properties/PropertiesService')
@@ -24,6 +27,9 @@ const SelectionInput = require('./card/classes/SelectionInput')
 const Image = require('./card/classes/Image')
 const UniversalActionResponseBuilder = require('./card/classes/UniversalActionResponseBuilder')
 
+global.Utilities = Utilities
+global.ScriptApp = ScriptApp
+global.OAuth2 = OAuth2
 global.CardService = CardService
 global.CacheService = CacheService
 global.PropertiesService = PropertiesService

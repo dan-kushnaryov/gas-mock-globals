@@ -3,12 +3,11 @@ const HttpResponse = require('../../src/url-fetch/classes/HttpResponse')
 
 describe('UrlFetchApp', () => {
   it('Should fetch the request', () => {
-    expect((new UrlFetchApp()).fetch('request1'))
-      .toBeInstanceOf(HttpResponse)
+    expect(UrlFetchApp.fetch('request1')).toBeInstanceOf(HttpResponse)
   })
 
   it('Should fetch multiple requests', () => {
-    const responses = (new UrlFetchApp()).fetchAll('request1', 'request2')
+    const responses = UrlFetchApp.fetchAll('request1', 'request2')
 
     expect(responses).toHaveLength(2)
     expect(responses[0]).toBeInstanceOf(HttpResponse)
@@ -17,6 +16,6 @@ describe('UrlFetchApp', () => {
   })
 
   it('Should get the request', () => {
-    expect((new UrlFetchApp()).getRequest('request1')).toEqual({})
+    expect(UrlFetchApp.getRequest('request1')).toEqual({})
   })
 })
