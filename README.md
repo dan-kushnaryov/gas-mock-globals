@@ -63,8 +63,6 @@ npm publish --access public
 
 * you've covered your code with tests
 * all the tests pass if you run `npm test`
-* you added your newe added class/service to readme and follow the highlighting pattern
-
 >>>
 
 ## Useful links
