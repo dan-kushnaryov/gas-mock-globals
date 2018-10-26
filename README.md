@@ -1,6 +1,6 @@
 # Gas Mock Globals
 
-This is a collection of (Google Apps Script services)[https://developers.google.com/apps-script/reference/] polyfills which can be used to mock Apps Script globals in your tests.
+This is a collection of [Google Apps Script services](https://developers.google.com/apps-script/reference/) polyfills which can be used to mock Apps Script globals in your tests.
 
 ## Installation
 
@@ -52,7 +52,7 @@ test('dummy test', () => {
 })
 ```
 
-See more examples in (examples)[./examples] directory.
+See more examples in [examples](./examples) directory.
 
 ## Contribution
 
