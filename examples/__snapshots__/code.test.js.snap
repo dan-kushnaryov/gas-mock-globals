@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gmail cards snapshot 1`] = `
+Object {
+  "cardActions": Array [],
+  "header": Object {
+    "title": "Card title",
+  },
+  "name": "Card name",
+  "sections": Array [
+    Object {
+      "header": "Section header",
+      "widgets": Array [
+        Object {
+          "text": "Text paragraph",
+        },
+      ],
+    },
+  ],
+}
+`;
