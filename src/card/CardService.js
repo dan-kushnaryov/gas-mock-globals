@@ -1,5 +1,6 @@
 // classes
 const Action = require('./classes/Action')
+const ActionResponseBuilder = require('./classes/ActionResponseBuilder')
 const AuthorizationAction = require('./classes/AuthorizationAction')
 const ButtonSet = require('./classes/ButtonSet')
 const CardAction = require('./classes/CardAction')
@@ -9,6 +10,7 @@ const CardSection = require('./classes/CardSection')
 const Image = require('./classes/Image')
 const ImageButton = require('./classes/ImageButton')
 const KeyValue = require('./classes/KeyValue')
+const Navigation = require('./classes/Navigation')
 const OpenLink = require('./classes/OpenLink')
 const SelectionInput = require('./classes/SelectionInput')
 const Suggestions = require('./classes/Suggestions')
@@ -30,6 +32,10 @@ const SelectionInputType = require('./enums/SelectionInputType')
 class CardService {
   static newAction () {
     return new Action()
+  }
+
+  static newActionResponseBuilder () {
+    return new ActionResponseBuilder()
   }
 
   static newAuthorizationAction () {
@@ -66,6 +72,10 @@ class CardService {
 
   static newKeyValue () {
     return new KeyValue()
+  }
+
+  static newNavigation () {
+    return new Navigation()
   }
 
   static newOpenLink () {
