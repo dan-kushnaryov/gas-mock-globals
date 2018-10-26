@@ -1,8 +1,6 @@
 # Gas Mock Globals
 
-This library is dedicated to mock the [google apps script services](https://developers.google.com/apps-script/reference/)
-
-It accumulates data which can be useful for writing tests and debugging the codebase.
+This is a collection of (Google Apps Script services)[https://developers.google.com/apps-script/reference/] polyfills which can be used to mock Apps Script globals in your tests.
 
 ## Installation
 
@@ -12,58 +10,56 @@ npm install --save-dev gas-mock-globals
 
 ## Usage
 
+Add import statement to the top of your script to load polyfills into global scope:
+
 ``` javascript
-import { Card } from 'gas-mock-globals'
+import 'gas-mock-globals'   // es-modules
+require('gas-mock-globals') // common-js
 ```
 
-or in Common.js
+Or use exact class without global namespace pollution:
 
-``` javascript
-const Card = require('gas-mock-globals')
+```javascript
+import CardService from 'gas-mock-globals/src/card/CardService'
+import Utilities from 'gas-mock-globals/src/utilities/Utilities'
+
+const cardSection = CardService.newCardSection();
+// Finish building the card section ...
+
+const header = CardService.newCardHeader().setTitle(Utilities.base64Encode('Card title'))
+
+const card = CardService.newCardBuilder()
+  .setName('Card name')
+  .setHeader(header)
+  .addSection(cardSection)
+  .build();
 ```
 
-## Test example ([Jest](https://jestjs.io/))
+And then you can use any JS testing framework to test your code intended to run on Apps Script environment:
 
-``` javascript
-import { Card } from 'gas-mock-globals'
-import GenericView from 'src/views/Generic'
-import data from '../helpers/mocks/responses/getData.json'
+```javascript
+// apps-script-code-module.js
+function dummyFunction () {
+  PropertiesService.getUserProperties().setProperty('DAYS_TO_FETCH', '5');
+  Logger.log('Current user\'s email', Session.getActiveUser().getEmail())
+  Logger.log('Encoded value', Utilities.base64Encode('john doe'))
+  return 'i\'m dummy'
+}
 
-describe('Generic View', () => {
-  it('Runs the render method and checks the returned data is a card instance', () => {
-    const card = new GenericView({ data }).render()
-
-    expect(card).toBeInstanceOf(Card)
-    expect(card.printJson()).toMatchSnapshot()
-  })
+// test
+test('dummy test', () => {
+  expect(dummyFunction()).toEqual('i\'m dummy')
 })
 ```
 
-As you can see using mock services is super easy and straightforward. All you have to do is import the specific class to your test file.
-In our expample we use mock API response to use that data in `GenericView` constructor call.
-Also, we check if the JSON representation of the view corresponds the snapshot.
+See more examples in (examples)[./examples] directory.
 
 ## Contribution
 
-### Running tests
-
-```bash
-npm test
-```
-
-### Publish
-
-```bash
-npm version
-npm publish --access public
-```
-
->>>
-**NOTE** that to contribute you should make sure that:
+To contribute you should make sure that:
 
 * you've covered your code with tests
 * all the tests pass if you run `npm test`
->>>
 
 ## Useful links
 
