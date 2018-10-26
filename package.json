@@ -22,7 +22,9 @@
     "modulePaths": [
       "node_modules",
       "."
-    ]
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "devDependencies": {
     "eslint": "^5.5.0",

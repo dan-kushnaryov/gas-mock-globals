@@ -1,22 +1,20 @@
-const {
-  CardService,
-  CardHeader,
-  CardBuilder,
-  CardSection,
-  KeyValue,
-  Action,
-  AuthorizationAction,
-  TextButton,
-  ImageButton,
-  OpenLink,
-  ButtonSet,
-  CardAction,
-  TextParagraph,
-  TextInput,
-  SelectionInput,
-  Image,
-  UniversalActionResponseBuilder
-} = require('../../src')
+const CardService = require('../../src/card/CardService')
+const CardHeader = require('../../src/card/classes/CardHeader')
+const CardBuilder = require('../../src/card/classes/CardBuilder')
+const CardSection = require('../../src/card/classes/CardSection')
+const KeyValue = require('../../src/card/classes/KeyValue')
+const Action = require('../../src/card/classes/Action')
+const AuthorizationAction = require('../../src/card/classes/AuthorizationAction')
+const TextButton = require('../../src/card/classes/TextButton')
+const ImageButton = require('../../src/card/classes/ImageButton')
+const OpenLink = require('../../src/card/classes/OpenLink')
+const ButtonSet = require('../../src/card/classes/ButtonSet')
+const CardAction = require('../../src/card/classes/CardAction')
+const TextParagraph = require('../../src/card/classes/TextParagraph')
+const TextInput = require('../../src/card/classes/TextInput')
+const SelectionInput = require('../../src/card/classes/SelectionInput')
+const Image = require('../../src/card/classes/Image')
+const UniversalActionResponseBuilder = require('../../src/card/classes/UniversalActionResponseBuilder')
 
 describe('CardService', () => {
   it('it should return the new instance of classes.CardHeader', () => {
