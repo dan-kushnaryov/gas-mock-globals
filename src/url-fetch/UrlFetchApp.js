@@ -1,15 +1,15 @@
 const HttpResponse = require('./classes/HttpResponse')
 
 class UrlFetchApp {
-  fetch (url, params = {}) {
+  static fetch (url, params = {}) {
     return new HttpResponse()
   }
 
-  fetchAll (...requests) {
+  static fetchAll (...requests) {
     return [...Array(requests.length)].map(() => this.fetch())
   }
 
-  getRequest (url, params = {}) {
+  static getRequest (url, params = {}) {
     return {}
   }
 }
