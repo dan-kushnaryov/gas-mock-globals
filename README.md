@@ -1,5 +1,9 @@
 # Gas Mock Service
 
+[![Build Status](https://travis-ci.com/dan-kushnaryov/gas-mock-globals.svg?branch=master)](https://travis-ci.com/dan-kushnaryov/gas-mock-globals)
+[![codecov](https://codecov.io/gh/dan-kushnaryov/gas-mock-globals/branch/master/graph/badge.svg)](https://codecov.io/gh/dan-kushnaryov/gas-mock-globals)
+[![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
+
 This library is dedicated to mock the [google apps script services](https://developers.google.com/apps-script/reference/)
 
 It accumulates data which can be useful for writing tests and debugging the codebase.

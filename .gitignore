@@ -6,4 +6,5 @@
 .*.swp
 .clasp.json
 node_modules/
+coverage
 dist
