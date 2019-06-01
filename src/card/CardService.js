@@ -28,6 +28,7 @@ const NotificationType = require('./enums/NotificationType')
 const OnClose = require('./enums/OnClose')
 const OpenAs = require('./enums/OpenAs')
 const SelectionInputType = require('./enums/SelectionInputType')
+const TextButtonStyle = require('./enums/TextButtonStyle')
 
 class CardService {
   static newAction () {
@@ -136,6 +137,10 @@ class CardService {
 
   static get SelectionInputType () {
     return SelectionInputType
+  }
+
+  static get TextButtonStyle () {
+    return TextButtonStyle
   }
 }
 
