@@ -7,7 +7,11 @@ class ActionResponseBuilder {
 
   setNavigation (navigation) {
     this._actionResponse.setNavigation(navigation)
+    return this
+  }
 
+  setNotification (notification) {
+    this._actionResponse.setNotification(notification)
     return this
   }
 

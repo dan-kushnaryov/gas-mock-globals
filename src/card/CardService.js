@@ -11,6 +11,7 @@ const Image = require('./classes/Image')
 const ImageButton = require('./classes/ImageButton')
 const KeyValue = require('./classes/KeyValue')
 const Navigation = require('./classes/Navigation')
+const Notification = require('./classes/Notification')
 const OpenLink = require('./classes/OpenLink')
 const SelectionInput = require('./classes/SelectionInput')
 const Suggestions = require('./classes/Suggestions')
@@ -77,6 +78,10 @@ class CardService {
 
   static newNavigation () {
     return new Navigation()
+  }
+
+  static newNotification () {
+    return new Notification()
   }
 
   static newOpenLink () {
