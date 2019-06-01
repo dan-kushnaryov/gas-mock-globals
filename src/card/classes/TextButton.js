@@ -15,7 +15,11 @@ class TextButton extends Button {
 
   setText (text) {
     this._data.text = text
+    return this
+  }
 
+  setTextButtonStyle (style) {
+    this._data.style = style
     return this
   }
 
