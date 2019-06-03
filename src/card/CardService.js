@@ -11,6 +11,7 @@ const Image = require('./classes/Image')
 const ImageButton = require('./classes/ImageButton')
 const KeyValue = require('./classes/KeyValue')
 const Navigation = require('./classes/Navigation')
+const Notification = require('./classes/Notification')
 const OpenLink = require('./classes/OpenLink')
 const SelectionInput = require('./classes/SelectionInput')
 const Suggestions = require('./classes/Suggestions')
@@ -28,6 +29,7 @@ const NotificationType = require('./enums/NotificationType')
 const OnClose = require('./enums/OnClose')
 const OpenAs = require('./enums/OpenAs')
 const SelectionInputType = require('./enums/SelectionInputType')
+const TextButtonStyle = require('./enums/TextButtonStyle')
 
 class CardService {
   static newAction () {
@@ -76,6 +78,10 @@ class CardService {
 
   static newNavigation () {
     return new Navigation()
+  }
+
+  static newNotification () {
+    return new Notification()
   }
 
   static newOpenLink () {
@@ -136,6 +142,10 @@ class CardService {
 
   static get SelectionInputType () {
     return SelectionInputType
+  }
+
+  static get TextButtonStyle () {
+    return TextButtonStyle
   }
 }
 
