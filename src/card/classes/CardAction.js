@@ -30,4 +30,4 @@ class CardAction extends BaseClass {
   }
 }
 
-module.exports = CardAction;
+module.exports = CardAction
