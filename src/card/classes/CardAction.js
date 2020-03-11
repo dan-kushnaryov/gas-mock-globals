@@ -1,32 +1,32 @@
-const set = require("lodash.set");
-const OpenLink = require("./OpenLink");
-const BaseClass = require("../../helpers/BaseClass");
+const set = require('lodash.set')
+const OpenLink = require('./OpenLink')
+const BaseClass = require('../../helpers/BaseClass')
 
 class CardAction extends BaseClass {
-  setOpenLink(openLink) {
-    if (openLink instanceof OpenLink === false) {
-      throw new Error('Invalid value passed for "setOpenLink"');
+  setOpenLink (openLink) {
+    if ((openLink instanceof OpenLink) === false) {
+      throw new Error('Invalid value passed for "setOpenLink"')
     }
 
-    set(this._data, "onClick.openLink", openLink.getData());
+    set(this._data, 'onClick.openLink', openLink.getData())
 
-    return this;
+    return this
   }
 
-  setText(text) {
-    this._data.actionLabel = text;
+  setText (text) {
+    this._data.actionLabel = text
 
-    return this;
+    return this
   }
 
-  setOnClickAction(action) {
-    if (action instanceof Action === false) {
-      throw new Error('Invalid value passed for "setOnClickAction"');
+  setOnClickAction (action) {
+    if ((action instanceof Action) === false) {
+      throw new Error('Invalid value passed for "setOnClickAction"')
     }
-
-    set(this._data, "onClick.action", action.getData());
-
-    return this;
+  
+    set(this._data, 'onClick.action', action.getData())
+  
+    return this
   }
 }
 
