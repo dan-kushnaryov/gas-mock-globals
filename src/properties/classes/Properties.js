@@ -1,41 +1,39 @@
-class Properties {
-  constructor () {
-    this._data = {}
-  }
+let data = {}
 
+class Properties {
   deleteAllProperties () {
-    this._data = {}
+    data = {}
 
     return this
   }
 
   deleteProperty (key) {
-    delete this._data[key]
+    delete data[key]
 
     return this
   }
 
   getKeys () {
-    return Object.keys(this._data)
+    return Object.keys(data)
   }
 
   getProperties () {
-    return this._data
+    return data
   }
 
   getProperty (key) {
-    return this._data[key] || null
+    return data[key] || null
   }
 
   setProperties (properties = {}, deleteAllOthers = false) {
-    this._data = Object
-      .assign(deleteAllOthers ? {} : this._data, properties)
+    data = Object
+      .assign(deleteAllOthers ? {} : data, properties)
 
     return this
   }
 
   setProperty (key, value) {
-    this._data[key] = value
+    data[key] = value
 
     return this
   }

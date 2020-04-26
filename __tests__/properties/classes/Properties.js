@@ -4,13 +4,16 @@ describe('Properties', () => {
   let properties
 
   beforeEach(() => {
-    properties = Object.assign(new Properties(), {
-      _data: {
-        key1: 'value1',
-        key2: 'value2',
-        key3: 'value3',
-      }
+    properties = new Properties()
+    properties.setProperties({
+      key1: 'value1',
+      key2: 'value2',
+      key3: 'value3',
     })
+  })
+
+  afterEach(() => {
+    properties.deleteAllProperties()
   })
 
   it('Should get the property by key', () => {
@@ -78,5 +81,11 @@ describe('Properties', () => {
 
   it('Should remove all properties', () => {
     expect(properties.deleteAllProperties().getProperties()).toEqual({})
+  })
+
+  test('Writes to one Properties should be visible to others', () => {
+    const otherProperties = new Properties()
+    properties.setProperty('foo', 'bar')
+    expect(otherProperties.getProperty('foo')).toEqual('bar')
   })
 })
