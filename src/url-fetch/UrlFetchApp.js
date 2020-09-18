@@ -1,12 +1,15 @@
-const HttpResponse = require('./classes/HttpResponse')
+const UrlFetchAppStubConfiguration = require('./classes/UrlFetchAppStubConfiguration')
 
 class UrlFetchApp {
   static fetch (url, params = {}) {
-    return new HttpResponse()
+    const data = UrlFetchAppStubConfiguration.get(url)
+    if(data)
+      return data.response
+    return null
   }
 
   static fetchAll (...requests) {
-    return [...Array(requests.length)].map(() => this.fetch())
+    return requests.map(request => this.fetch(request.url, request.params))
   }
 
   static getRequest (url, params = {}) {
