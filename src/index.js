@@ -6,6 +6,7 @@ const CardService = require('./card/CardService')
 const CacheService = require('./cache/CacheService')
 const PropertiesService = require('./properties/PropertiesService')
 const UrlFetchApp = require('./url-fetch/UrlFetchApp')
+const UrlFetchAppStubConfiguration = require('./url-fetch/classes/UrlFetchAppStubConfiguration')
 const Session = require('./base/classes/Session')
 const Logger = require('./base/classes/Logger')
 
@@ -18,3 +19,4 @@ global.PropertiesService = PropertiesService
 global.UrlFetchApp = UrlFetchApp
 global.Session = Session
 global.Logger = Logger
+global.UrlFetchAppStubConfiguration = UrlFetchAppStubConfiguration
