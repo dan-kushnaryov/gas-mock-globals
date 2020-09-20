@@ -1,34 +1,36 @@
 class UrlFetchAppStubConfiguration {
-    constructor () {
-      // requests array has all the URLs with their specific responses
-      this.requests = []
-      
-      // to find & correctly set the response to specific URL in 'return' method
-      this.currentUrl = ''
-    }
+  constructor () {
+    // requests array has all the URLs with their specific responses
+    this.requests = []
 
-    when (url) {
-      this.currentUrl = url
-      this.requests.push({url})
-      return this
-    }
+    // to find & correctly set the response to specific URL in 'return' method
+    this.currentUrl = ''
+  }
 
-    return (response) {
-      const data = this.get(this.currentUrl)
-      data.response = response
-      this.currentUrl = ''
-      return this
-    }
+  when (url) {
+    this.currentUrl = url
+    // const data = this.get(this.currentUrl)
+    // if (!data) {
+    this.requests.push({ url })
+    // }
+    return this
+  }
 
-    get (url) {
-      return this.requests.find(r => r.url === url)
-    }
+  return (response) {
+    const data = this.get(this.currentUrl)
+    data.response = response
+    this.currentUrl = ''
+    return this
+  }
 
-    reset () {
-      this.currentUrl = ''
-      this.requests = []
-    }
+  get (url) {
+    return this.requests.find(r => r.url === url)
+  }
 
+  reset () {
+    this.currentUrl = ''
+    this.requests = []
+  }
 }
 
 module.exports = new UrlFetchAppStubConfiguration()

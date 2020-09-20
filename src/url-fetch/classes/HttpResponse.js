@@ -1,7 +1,7 @@
 const Blob = require('../../base/classes/Blob')
 
-class HttpResponse { 
-  constructor(){
+class HttpResponse {
+  constructor () {
     this.statusCode = 200
     this.context = ''
   }
@@ -31,7 +31,7 @@ class HttpResponse {
     return this.context
   }
 
-  setContentText(context){
+  setContentText (context) {
     this.context = context
     return this
   }
@@ -40,7 +40,7 @@ class HttpResponse {
     return this.statusCode
   }
 
-  setResponseCode(statusCode){
+  setResponseCode (statusCode) {
     this.statusCode = statusCode
     return this
   }
