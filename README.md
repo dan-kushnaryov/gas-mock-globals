@@ -56,6 +56,27 @@ test('dummy test', () => {
 })
 ```
 
+Test UrlFetchApp:
+
+```javascript
+function getUser (id) {
+  return UrlFetchApp.fetch(`https:backend-url/user/${id}`) 
+}
+
+// test
+test('Test API Request to Get User', () => {
+  const id = 348
+  const email = 'user@gmail.com'
+
+  UrlFetchAppStubConfiguration.when(`https:backend-url/user/${id}`)
+    .return(new HttpResponse().setContentText({ id, email }))
+  
+  const response = getUser(id)
+  expect(response.getResponseCode()).toBe(200)
+  expect(response.getContentText()).toBe({ id, email })
+})
+```
+
 See more examples in [examples](./examples) directory.
 
 ## Contribution
