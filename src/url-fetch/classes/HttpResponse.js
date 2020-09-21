@@ -1,6 +1,11 @@
 const Blob = require('../../base/classes/Blob')
 
 class HttpResponse {
+  constructor () {
+    this.statusCode = 200
+    this.context = ''
+  }
+
   getAllHeaders () {
     return this.getHeaders()
   }
@@ -23,11 +28,21 @@ class HttpResponse {
   }
 
   getContentText () {
-    return 'dummy-content-text'
+    return this.context
+  }
+
+  setContentText (context) {
+    this.context = context
+    return this
   }
 
   getResponseCode () {
-    return 200
+    return this.statusCode
+  }
+
+  setResponseCode (statusCode) {
+    this.statusCode = statusCode
+    return this
   }
 }
 
