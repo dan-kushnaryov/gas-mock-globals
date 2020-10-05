@@ -11,6 +11,7 @@ const Session = require('./base/classes/Session')
 const Logger = require('./base/classes/Logger')
 const SpreadsheetApp = require('./spreadsheetapp/SpreadsheetApp')
 const SpreadSheetAppStubConfiguration = require('./spreadsheetapp/classes/SpreadSheetAppStubConfiguration')
+const ScriptAppStubConfiguration = require('./script/classes/ScriptAppStubConfiguration')
 
 global.Utilities = Utilities
 global.ScriptApp = ScriptApp
@@ -24,3 +25,4 @@ global.Logger = Logger
 global.UrlFetchAppStubConfiguration = UrlFetchAppStubConfiguration
 global.SpreadsheetApp = SpreadsheetApp
 global.SpreadSheetAppStubConfiguration = SpreadSheetAppStubConfiguration
+global.ScriptAppStubConfiguration = ScriptAppStubConfiguration
