@@ -14,7 +14,7 @@ class UrlFetchApp {
     return new HttpResponse()
   }
 
-  static fetchAll (...requests) {
+  static fetchAll (requests) {
     return requests.map(request => this.fetch(request.url, request.params))
   }
 

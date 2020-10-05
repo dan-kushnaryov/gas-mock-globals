@@ -13,7 +13,7 @@ describe('UrlFetchApp', () => {
     UrlFetchAppStubConfiguration.when('www.google.com').return(new HttpResponse())
     UrlFetchAppStubConfiguration.when('www.gmail.com').return(new HttpResponse())
 
-    const responses = UrlFetchApp.fetchAll({ url: 'www.google.com', params: {} }, { url: 'www.gmail.com', params: {} })
+    const responses = UrlFetchApp.fetchAll([{ url: 'www.google.com', params: {} }, { url: 'www.gmail.com', params: {} }])
 
     expect(responses).toHaveLength(2)
     expect(responses[0]).toBeInstanceOf(HttpResponse)
