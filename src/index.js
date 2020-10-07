@@ -11,6 +11,8 @@ const UrlFetchAppStubConfiguration = require('./url-fetch/classes/UrlFetchAppStu
 const Session = require('./base/classes/Session')
 const Logger = require('./base/classes/Logger')
 const SpreadsheetApp = require('./spreadsheetapp/SpreadsheetApp')
+const Spreadsheet = require('./spreadsheet/Spreadsheet')
+const SpreadsheetStubConfiguration = require('./spreadsheet/classes/SpreadsheetStubConfiguration')
 const ScriptAppStubConfiguration = require('./script/classes/ScriptAppStubConfiguration')
 
 global.Utilities = Utilities
@@ -25,4 +27,6 @@ global.Session = Session
 global.Logger = Logger
 global.UrlFetchAppStubConfiguration = UrlFetchAppStubConfiguration
 global.SpreadsheetApp = SpreadsheetApp
+global.Spreadsheet = Spreadsheet
+global.SpreadsheetStubConfiguration = SpreadsheetStubConfiguration
 global.ScriptAppStubConfiguration = ScriptAppStubConfiguration
