@@ -1,4 +1,4 @@
-class SpreadSheetAppStubConfiguration {
+class SpreadsheetStubConfiguration {
   constructor () {
     this.init()
   }
@@ -30,4 +30,4 @@ class SpreadSheetAppStubConfiguration {
   }
 }
 
-module.exports = new SpreadSheetAppStubConfiguration()
+module.exports = new SpreadsheetStubConfiguration()

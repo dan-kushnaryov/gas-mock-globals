@@ -1,20 +1,8 @@
-const SpreadSheetAppStubConfiguration = require('./classes/SpreadSheetAppStubConfiguration')
+const Spreadsheet = require('../spreadsheet/Spreadsheet')
 
 class SpreadSheetApp {
-  static getSpreadsheetTimeZone () {
-    return SpreadSheetAppStubConfiguration.getTimeZone()
-  }
-
-  static getSpreadsheetLocale () {
-    return SpreadSheetAppStubConfiguration.getLocale()
-  }
-
-  static setSpreadsheetTimeZone (timezone) {
-    return SpreadSheetAppStubConfiguration.setTimeZone(timezone)
-  }
-
-  static setSpreadsheetLocale (locale) {
-    return SpreadSheetAppStubConfiguration.setLocale(locale)
+  static getActiveSpreadsheet () {
+    return Spreadsheet
   }
 }
 
