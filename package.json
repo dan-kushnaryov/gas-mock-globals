@@ -1,6 +1,6 @@
 {
   "name": "gas-mock-globals",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A library that mocks Google Apps Script Services",
   "main": "src/index.js",
   "scripts": {
