@@ -18,6 +18,7 @@
     "url": "git+https://github.com/dan-kushnaryov/google-apps-script-services.git"
   },
   "author": "Danil Kushnaryov",
+  "license": "MIT",
   "jest": {
     "modulePaths": [
       "node_modules",
