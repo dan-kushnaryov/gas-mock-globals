@@ -1,6 +1,6 @@
 class Utilities {
   static base64Encode (string) {
-    return global.atob(string)
+    return Buffer.from(string).toString('base64')
   }
 
   static formatDate (date, tz, format) {
