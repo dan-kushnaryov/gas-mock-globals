@@ -13,6 +13,13 @@ export default class ActionResponseBuilder {
     this._data = { actionResponse: new ActionResponse() };
   }
 
+  getData() {
+    return {
+      actionResponse: this._data.actionResponse.getData(),
+      openLink: this._data.openLink?.getData(),
+    };
+  }
+
   setNavigation(navigation: Navigation) {
     this._data.actionResponse.setNavigation(navigation);
     return this;
@@ -29,6 +36,6 @@ export default class ActionResponseBuilder {
   }
 
   build() {
-    return this._data.actionResponse;
+    return this.getData();
   }
 }
