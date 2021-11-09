@@ -4,38 +4,28 @@ import Notification from './Notification';
 import OpenLink from './OpenLink';
 
 export default class ActionResponseBuilder {
-  public _data: {
-    actionResponse: ActionResponse;
-    openLink?: OpenLink;
-  };
+  public _actionResponse: ActionResponse;
 
   constructor() {
-    this._data = { actionResponse: new ActionResponse() };
-  }
-
-  getData() {
-    return {
-      actionResponse: this._data.actionResponse.getData(),
-      openLink: this._data.openLink?.getData(),
-    };
+    this._actionResponse = new ActionResponse();
   }
 
   setNavigation(navigation: Navigation) {
-    this._data.actionResponse.setNavigation(navigation);
+    this._actionResponse.setNavigation(navigation);
     return this;
   }
 
   setNotification(notification: Notification) {
-    this._data.actionResponse.setNotification(notification);
+    this._actionResponse.setNotification(notification);
     return this;
   }
 
   setOpenLink(openLink: OpenLink) {
-    this._data.openLink = openLink;
+    this._actionResponse.setOpenLink(openLink);
     return this;
   }
 
   build() {
-    return this.getData();
+    return this._actionResponse;
   }
 }
