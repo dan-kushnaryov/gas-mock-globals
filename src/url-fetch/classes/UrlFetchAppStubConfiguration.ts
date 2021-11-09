@@ -1,4 +1,4 @@
-export default class UrlFetchAppStubConfiguration {
+export class UrlFetchAppStubConfiguration {
   public requests: { url: string; response?: unknown }[];
 
   public currentUrl: string;
@@ -39,4 +39,6 @@ export default class UrlFetchAppStubConfiguration {
   }
 }
 
-module.exports = new UrlFetchAppStubConfiguration();
+const urlFetchAppStubConfiguration = new UrlFetchAppStubConfiguration();
+
+export default urlFetchAppStubConfiguration;

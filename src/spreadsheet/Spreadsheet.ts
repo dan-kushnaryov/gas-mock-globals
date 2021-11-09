@@ -9,11 +9,11 @@ export default class Spreadsheet {
     return SpreadsheetStubConfiguration.getLocale();
   }
 
-  static setSpreadsheetTimeZone(timezone) {
+  static setSpreadsheetTimeZone(timezone: string) {
     return SpreadsheetStubConfiguration.setTimeZone(timezone);
   }
 
-  static setSpreadsheetLocale(locale) {
+  static setSpreadsheetLocale(locale: string) {
     return SpreadsheetStubConfiguration.setLocale(locale);
   }
 }

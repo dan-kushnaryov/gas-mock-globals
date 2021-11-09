@@ -1,7 +1,7 @@
-export default class SpreadsheetStubConfiguration {
-  public _timezone: any;
+export class SpreadsheetStubConfiguration {
+  public _timezone?: string;
 
-  public _locale: any;
+  public _locale?: string;
 
   constructor() {
     this.init();
@@ -17,7 +17,7 @@ export default class SpreadsheetStubConfiguration {
     return this._timezone;
   }
 
-  setTimeZone(timezone) {
+  setTimeZone(timezone: string) {
     this._timezone = timezone;
   }
 
@@ -25,7 +25,7 @@ export default class SpreadsheetStubConfiguration {
     return this._locale;
   }
 
-  setLocale(locale) {
+  setLocale(locale: string) {
     this._locale = locale;
   }
 
@@ -34,4 +34,6 @@ export default class SpreadsheetStubConfiguration {
   }
 }
 
-module.exports = new SpreadsheetStubConfiguration();
+const spreadsheetStubConfiguration = new SpreadsheetStubConfiguration();
+
+export default spreadsheetStubConfiguration;

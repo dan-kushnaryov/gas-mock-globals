@@ -1,9 +1,9 @@
 import Blob from '../../base/classes/Blob';
 
 export default class HttpResponse {
-  public statusCode: any;
+  public statusCode: number;
 
-  public context: any;
+  public context: string;
 
   constructor() {
     this.statusCode = 200;
@@ -44,7 +44,7 @@ export default class HttpResponse {
     return this.statusCode;
   }
 
-  setResponseCode(statusCode: string) {
+  setResponseCode(statusCode: number) {
     this.statusCode = statusCode;
     return this;
   }

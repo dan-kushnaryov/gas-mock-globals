@@ -2,7 +2,7 @@ import HttpResponse from './classes/HttpResponse';
 import UrlFetchAppStubConfiguration from './classes/UrlFetchAppStubConfiguration';
 
 export default class UrlFetchApp {
-  static fetch(url, params = {}) {
+  static fetch(url: string, params: Record<string, string> = {}) {
     const data = UrlFetchAppStubConfiguration.get(url);
     if (data) {
       return data.response;
@@ -14,11 +14,11 @@ export default class UrlFetchApp {
     return new HttpResponse();
   }
 
-  static fetchAll(requests) {
+  static fetchAll(requests: { url: string; params: Record<string, string> }[]) {
     return requests.map((request) => this.fetch(request.url, request.params));
   }
 
-  static getRequest(url, params = {}) {
+  static getRequest(url: string, params: Record<string, string> = {}) {
     return {};
   }
 }

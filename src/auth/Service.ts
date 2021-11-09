@@ -2,7 +2,24 @@ import BaseClass from '../../src/helpers/BaseClass';
 import Properties from '../properties/classes/Properties';
 
 export default class Service extends BaseClass {
-  public _data: any;
+  public _data: {
+    serviceName: string;
+    params: Record<string, string>;
+    scriptId: string;
+    authorizationBaseUrl?: string;
+    tokenUrl?: string;
+    clientId?: string;
+    clientSecret?: string;
+    callbackFunctionName?: string;
+    propertyStore?: Properties;
+    cache?: Cache;
+    lock?: any;
+    privateKey?: string;
+    issuer?: string;
+    subject?: string;
+    expirationMinutes?: number;
+    grantType?: any;
+  };
 
   constructor(serviceName: string) {
     super();
@@ -98,7 +115,7 @@ export default class Service extends BaseClass {
     return this;
   }
 
-  setGrantType(grantType: string) {
+  setGrantType(grantType: any) {
     this._data.grantType = grantType;
 
     return this;
@@ -130,15 +147,15 @@ export default class Service extends BaseClass {
     return `https://dummy-redirect-url.com/${this._data.scriptId}`;
   }
 
-  fetchToken(payload, optUrl) {
+  fetchToken(payload: any, optUrl: string) {
     return { token: 'dummy-token' };
   }
 
-  getTokenFromResponse(response) {
+  getTokenFromResponse(response: any) {
     return 'dummy-response-token';
   }
 
-  parseToken(content) {
+  parseToken(content: any) {
     return 'dummy-parse-token';
   }
 

@@ -1,7 +1,7 @@
-export default class ScriptAppStubConfiguration {
-  public _scriptId: any;
+export class ScriptAppStubConfiguration {
+  public _scriptId?: string;
 
-  public _oauthToken: any;
+  public _oauthToken?: string;
 
   constructor() {
     this.init();
@@ -17,7 +17,7 @@ export default class ScriptAppStubConfiguration {
     return this._scriptId;
   }
 
-  setScriptId(scriptId) {
+  setScriptId(scriptId: string) {
     this._scriptId = scriptId;
   }
 
@@ -25,7 +25,7 @@ export default class ScriptAppStubConfiguration {
     return this._oauthToken;
   }
 
-  setOAuthToken(token) {
+  setOAuthToken(token: string) {
     this._oauthToken = token;
   }
 
@@ -34,4 +34,5 @@ export default class ScriptAppStubConfiguration {
   }
 }
 
-module.exports = new ScriptAppStubConfiguration();
+const scriptAppStubConfiguration = new ScriptAppStubConfiguration();
+export default scriptAppStubConfiguration;

@@ -1,5 +1,5 @@
 export default class BaseClass {
-  public _data: any;
+  public _data: Record<string, unknown>;
 
   constructor() {
     this._data = {};
