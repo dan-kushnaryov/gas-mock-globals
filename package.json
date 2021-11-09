@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint . --ext .js,.ts"
   },
   "keywords": [
     "gas",
@@ -28,15 +28,28 @@
     "collectCoverage": true
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/jest": "^27.0.2",
+    "@types/lodash.set": "^4.3.6",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "babel-jest": "^27.3.1",
     "eslint": "^8.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-airbnb-typescript": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.22.0",
     "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "jest": "^27.3.1"
+    "jest": "^27.3.1",
+    "js-to-ts-converter": "^0.18.1",
+    "prettier": "^2.4.1"
   },
   "dependencies": {
     "lodash.set": "^4.3.2"
