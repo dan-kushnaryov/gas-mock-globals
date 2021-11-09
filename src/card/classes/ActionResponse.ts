@@ -30,4 +30,12 @@ export default class ActionResponse {
     }
     this._data.notification = notification.getData();
   }
+
+  setOpenLink(openLink: OpenLink) {
+    if (openLink instanceof OpenLink === false) {
+      throw new Error('Invalid value passed for "setOpenLink"');
+    }
+    this._data.openLink = openLink.getData();
+    return this;
+  }
 }

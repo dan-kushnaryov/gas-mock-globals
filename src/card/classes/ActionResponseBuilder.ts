@@ -24,9 +24,6 @@ export default class ActionResponseBuilder {
   }
 
   setOpenLink(openLink: OpenLink) {
-    if (openLink instanceof OpenLink === false) {
-      throw new Error('Invalid value passed for "setOpenLink"');
-    }
     this._data.openLink = openLink;
     return this;
   }
