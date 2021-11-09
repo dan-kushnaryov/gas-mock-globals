@@ -11,6 +11,10 @@ export default class CardAction {
     };
   } = {};
 
+  getData() {
+    return this._data;
+  }
+
   setOpenLink(openLink: OpenLink) {
     if (openLink instanceof OpenLink === false) {
       throw new Error('Invalid value passed for "setOpenLink"');
