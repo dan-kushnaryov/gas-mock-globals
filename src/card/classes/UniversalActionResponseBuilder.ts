@@ -2,8 +2,6 @@ import Card from './Card';
 import OpenLink from './OpenLink';
 
 export default class UniversalActionResponseBuilder {
-  public getData: any;
-
   public _data: {
     cards?: Card[];
     openLink?: OpenLink;
@@ -11,6 +9,10 @@ export default class UniversalActionResponseBuilder {
 
   constructor() {
     this._data = {};
+  }
+
+  getData() {
+    return this._data;
   }
 
   build() {

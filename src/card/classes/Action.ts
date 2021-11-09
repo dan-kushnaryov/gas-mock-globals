@@ -3,12 +3,12 @@ import LoadIndicator from '../enums/LoadIndicator';
 export default class Action {
   public _data: {
     actionMethodName?: string;
-    parameters: Record<string, string>;
-    loadIndicator: LoadIndicator;
+    parameters?: Record<string, string>;
+    loadIndicator?: LoadIndicator;
   };
 
   constructor() {
-    this._data = { loadIndicator: LoadIndicator.SPINNER, parameters: {} };
+    this._data = {};
   }
 
   getData() {

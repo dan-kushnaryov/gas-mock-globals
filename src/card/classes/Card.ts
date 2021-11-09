@@ -10,10 +10,12 @@ export default class Card {
     cardActions: ReturnType<CardAction['getData']>[];
   };
 
-  public getData: any;
-
   constructor() {
     this._data = { sections: [], cardActions: [] };
+  }
+
+  getData() {
+    return this._data;
   }
 
   setName(name: string) {
