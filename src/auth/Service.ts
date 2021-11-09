@@ -25,9 +25,11 @@ export default class Service extends BaseClass {
   constructor(serviceName: string) {
     super();
 
-    this._data.serviceName = serviceName;
-    this._data.params = {};
-    this._data.scriptId = 'dummy-script-id';
+    this._data = {
+      serviceName,
+      params: {},
+      scriptId: 'dummy-script-id',
+    };
   }
 
   setAuthorizationBaseUrl(authorizationBaseUrl: string) {
