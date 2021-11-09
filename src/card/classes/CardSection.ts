@@ -1,6 +1,7 @@
 import BaseClass from '../../helpers/BaseClass';
 import Button from './Button';
 import ButtonSet from './ButtonSet';
+import CardHeader from './CardHeader';
 import Widget from './Widget';
 
 export default class CardSection extends BaseClass {
@@ -11,7 +12,7 @@ export default class CardSection extends BaseClass {
     this._data.widgets = [];
   }
 
-  addWidget(widget) {
+  addWidget(widget: Widget) {
     if (widget instanceof Widget === false) {
       throw new Error('Invalid value passed for "addWidget"');
     }
@@ -27,19 +28,19 @@ export default class CardSection extends BaseClass {
     return this;
   }
 
-  setCollapsible(collapsible) {
+  setCollapsible(collapsible: boolean) {
     this._data.collapsible = collapsible;
 
     return this;
   }
 
-  setHeader(header) {
+  setHeader(header: CardHeader) {
     this._data.header = header;
 
     return this;
   }
 
-  setNumUncollapsibleWidgets(uncollapsiblewidgetsNum) {
+  setNumUncollapsibleWidgets(uncollapsiblewidgetsNum: number) {
     this._data.uncollapsiblewidgetsNum = uncollapsiblewidgetsNum;
 
     return this;
