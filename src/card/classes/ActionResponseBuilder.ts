@@ -28,6 +28,7 @@ export default class ActionResponseBuilder {
       throw new Error('Invalid value passed for "setOpenLink"');
     }
     this._data.openLink = openLink;
+    return this;
   }
 
   build() {
