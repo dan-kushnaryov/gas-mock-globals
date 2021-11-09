@@ -3,3 +3,5 @@ enum SelectionInputType {
   RADIO_BUTTON = 'RADIO_BUTTON',
   DROPDOWN = 'DROPDOWN',
 }
+
+export default SelectionInputType;

@@ -1,7 +1,6 @@
 import BaseClass from '../../helpers/BaseClass';
 import Button from './Button';
 import ButtonSet from './ButtonSet';
-import CardHeader from './CardHeader';
 import Widget from './Widget';
 
 export default class CardSection extends BaseClass {
@@ -34,7 +33,7 @@ export default class CardSection extends BaseClass {
     return this;
   }
 
-  setHeader(header: CardHeader) {
+  setHeader(header: string) {
     this._data.header = header;
 
     return this;

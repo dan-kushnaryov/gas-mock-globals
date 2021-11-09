@@ -1,4 +1,5 @@
 import BaseClass from '../../src/helpers/BaseClass';
+import Cache from '../cache/classes/Cache';
 import Properties from '../properties/classes/Properties';
 
 export default class Service extends BaseClass {

@@ -14,7 +14,7 @@ export default class Card extends BaseClass {
     this._data.cardActions = [];
   }
 
-  setName(name) {
+  setName(name: string) {
     // TODO: check the name of the property
     this._data.name = name;
 

@@ -1,5 +1,7 @@
 import Card from './Card';
 import CardAction from './CardAction';
+import CardHeader from './CardHeader';
+import CardSection from './CardSection';
 
 export default class CardBuilder {
   public _card: any;
@@ -14,19 +16,19 @@ export default class CardBuilder {
     return this;
   }
 
-  setName(name) {
+  setName(name: string) {
     this._card.setName(name);
 
     return this;
   }
 
-  setHeader(header) {
+  setHeader(header: CardHeader) {
     this._card.setHeader(header);
 
     return this;
   }
 
-  addSection(section) {
+  addSection(section: CardSection) {
     this._card.addSection(section);
 
     return this;

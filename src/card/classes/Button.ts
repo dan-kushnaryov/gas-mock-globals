@@ -17,7 +17,7 @@ export default class Button extends Widget {
     return this;
   }
 
-  setOnClickAction(action) {
+  setOnClickAction(action: Action) {
     if (action instanceof Action === false) {
       throw new Error('Invalid value passed for "setOnClickAction"');
     }
@@ -27,7 +27,7 @@ export default class Button extends Widget {
     return this;
   }
 
-  setOpenLink(openLink) {
+  setOpenLink(openLink: OpenLink) {
     if (openLink instanceof OpenLink === false) {
       throw new Error('Invalid value passed for "setOpenLink"');
     }
