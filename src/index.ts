@@ -1,0 +1,32 @@
+// Global Services
+import OAuth2 from './auth/OAuth2';
+import Logger from './base/classes/Logger';
+import Session from './base/classes/Session';
+import CacheService from './cache/CacheService';
+import CardService from './card/CardService';
+import PropertiesService from './properties/PropertiesService';
+import ScriptAppStubConfiguration from './script/classes/ScriptAppStubConfiguration';
+import ScriptApp from './script/ScriptApp';
+import SpreadsheetStubConfiguration from './spreadsheet/classes/SpreadsheetStubConfiguration';
+import Spreadsheet from './spreadsheet/Spreadsheet';
+import SpreadsheetApp from './spreadsheetapp/SpreadsheetApp';
+import HttpResponse from './url-fetch/classes/HttpResponse';
+import UrlFetchAppStubConfiguration from './url-fetch/classes/UrlFetchAppStubConfiguration';
+import UrlFetchApp from './url-fetch/UrlFetchApp';
+import Utilities from './utilities/Utilities';
+
+global.Utilities = Utilities;
+global.ScriptApp = ScriptApp;
+global.OAuth2 = OAuth2;
+global.CardService = CardService;
+global.CacheService = CacheService;
+global.PropertiesService = PropertiesService;
+global.UrlFetchApp = UrlFetchApp;
+global.HttpResponse = HttpResponse;
+global.Session = Session;
+global.Logger = Logger;
+global.UrlFetchAppStubConfiguration = UrlFetchAppStubConfiguration;
+global.SpreadsheetApp = SpreadsheetApp;
+global.Spreadsheet = Spreadsheet;
+global.SpreadsheetStubConfiguration = SpreadsheetStubConfiguration;
+global.ScriptAppStubConfiguration = ScriptAppStubConfiguration;

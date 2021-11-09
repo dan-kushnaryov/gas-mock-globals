@@ -1,16 +1,22 @@
 {
   "plugins": [
-    "jest"
+    "jest",
+    "prettier"
   ],
   "extends": [
     "airbnb-base",
     "standard",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "prettier"
   ],
+
   "rules": {
     "no-console": "off",
     "no-underscore-dangle": "off",
     "comma-dangle": "off",
-    "class-methods-use-this": "off"
-  }
+    "class-methods-use-this": "off",
+      "prettier/prettier": [
+        "error"
+      ]
+    }
 }

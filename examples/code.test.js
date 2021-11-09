@@ -1,21 +1,21 @@
 /* eslint-disable no-undef */
-require('..') // load polyfills
-const code = require('./code')
+import { dummyFunction, getGmailCard, doesUserSpeakEnglish } from './code';
+import '../src';
 
 test('Function which uses Apps Script services under the hood', () => {
-  expect(code.dummyFunction()).toBe('i\'m dummy')
-})
+  expect(dummyFunction()).toBe("i'm dummy");
+});
 
 test('Mocking global services methods', () => {
-  Session.getActiveUserLocale = jest.fn().mockReturnValue('fr')
+  Session.getActiveUserLocale = jest.fn().mockReturnValue('fr');
 
-  const result = code.doesUserSpeakEnglish()
+  const result = doesUserSpeakEnglish();
 
-  expect(Session.getActiveUserLocale).toBeCalled()
-  expect(result).toBeFalsy()
-})
+  expect(Session.getActiveUserLocale).toBeCalled();
+  expect(result).toBeFalsy();
+});
 
 test('Gmail cards snapshot', () => {
-  const card = code.getGmailCard()
-  expect(card.printJson()).toMatchSnapshot()
-})
+  const card = getGmailCard();
+  expect(card.printJson()).toMatchSnapshot();
+});
