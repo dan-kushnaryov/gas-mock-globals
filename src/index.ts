@@ -15,18 +15,20 @@ import UrlFetchAppStubConfiguration from './url-fetch/classes/UrlFetchAppStubCon
 import UrlFetchApp from './url-fetch/UrlFetchApp';
 import Utilities from './utilities/Utilities';
 
-global.Utilities = Utilities;
-global.ScriptApp = ScriptApp;
-global.OAuth2 = OAuth2;
-global.CardService = CardService;
-global.CacheService = CacheService;
-global.PropertiesService = PropertiesService;
-global.UrlFetchApp = UrlFetchApp;
-global.HttpResponse = HttpResponse;
-global.Session = Session;
-global.Logger = Logger;
-global.UrlFetchAppStubConfiguration = UrlFetchAppStubConfiguration;
-global.SpreadsheetApp = SpreadsheetApp;
-global.Spreadsheet = Spreadsheet;
-global.SpreadsheetStubConfiguration = SpreadsheetStubConfiguration;
-global.ScriptAppStubConfiguration = ScriptAppStubConfiguration;
+export {
+  Utilities,
+  ScriptApp,
+  OAuth2,
+  CardService,
+  CacheService,
+  PropertiesService,
+  UrlFetchApp,
+  HttpResponse,
+  Logger,
+  Session,
+  ScriptAppStubConfiguration,
+  Spreadsheet,
+  SpreadsheetApp,
+  SpreadsheetStubConfiguration,
+  UrlFetchAppStubConfiguration,
+};
