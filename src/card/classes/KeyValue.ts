@@ -35,7 +35,7 @@ export default class KeyValue extends Widget {
     return this;
   }
 
-  setMultiline(multiline: string) {
+  setMultiline(multiline: boolean) {
     this._data.multiline = multiline;
 
     return this;

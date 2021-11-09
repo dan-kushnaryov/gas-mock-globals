@@ -1,7 +1,7 @@
 import Card from '../../../src/card/classes/Card';
+import CardAction from '../../../src/card/classes/CardAction';
 import CardHeader from '../../../src/card/classes/CardHeader';
 import CardSection from '../../../src/card/classes/CardSection';
-import CardAction from '../../../src/card/classes/CardAction';
 
 describe('Card', () => {
   it('Should set the name', () => {

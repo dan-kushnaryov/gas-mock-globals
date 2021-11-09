@@ -8,8 +8,8 @@ describe('Action', () => {
   });
 
   it('Should set the parameters', () => {
-    const data = new Action().setParameters('test-parameters').getData();
+    const data = new Action().setParameters({ test: 'test-parameter' }).getData();
 
-    expect(data).toEqual({ parameters: 'test-parameters' });
+    expect(data).toEqual({ parameters: { test: 'test-parameter' } });
   });
 });

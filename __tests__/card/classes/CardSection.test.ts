@@ -1,6 +1,6 @@
+import Button from '../../../src/card/classes/Button';
 import CardSection from '../../../src/card/classes/CardSection';
 import Widget from '../../../src/card/classes/Widget';
-import Button from '../../../src/card/classes/Button';
 
 describe('CardSection', () => {
   it('Should add widget', () => {

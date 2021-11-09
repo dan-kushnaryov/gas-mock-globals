@@ -1,6 +1,6 @@
-import UrlFetchApp from '../../src/url-fetch/UrlFetchApp';
 import HttpResponse from '../../src/url-fetch/classes/HttpResponse';
 import UrlFetchAppStubConfiguration from '../../src/url-fetch/classes/UrlFetchAppStubConfiguration';
+import UrlFetchApp from '../../src/url-fetch/UrlFetchApp';
 
 describe('UrlFetchApp', () => {
   it('Should fetch the request', () => {

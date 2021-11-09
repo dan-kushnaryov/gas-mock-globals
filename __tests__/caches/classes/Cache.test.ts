@@ -1,7 +1,7 @@
 import Cache from '../../../src/cache/classes/Cache';
 
 describe('Cache', () => {
-  let cache;
+  let cache: Cache;
 
   beforeEach(() => {
     cache = Object.assign(new Cache(), {

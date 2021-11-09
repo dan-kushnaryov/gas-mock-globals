@@ -1,7 +1,7 @@
 import Properties from '../../../src/properties/classes/Properties';
 
 describe('Properties', () => {
-  let properties;
+  let properties: Properties;
 
   beforeEach(() => {
     properties = new Properties();

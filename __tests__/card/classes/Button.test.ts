@@ -1,5 +1,5 @@
-import Button from '../../../src/card/classes/Button';
 import Action from '../../../src/card/classes/Action';
+import Button from '../../../src/card/classes/Button';
 import OpenLink from '../../../src/card/classes/OpenLink';
 
 describe('Button', () => {
