@@ -5,7 +5,22 @@ import OpenLink from './OpenLink';
 import Widget from './Widget';
 
 export default class KeyValue extends Widget {
-  public _data: any;
+  public _data: {
+    bottomLabel?: string;
+    content?: string;
+    iconUrl?: string;
+    multiline?: boolean;
+    onClick?: { action: Action };
+    openLink?: ReturnType<OpenLink['getData']>;
+    textButton?: ReturnType<Button['getData']>;
+    topLabel?: string;
+  };
+
+  constructor() {
+    super();
+
+    this._data = {};
+  }
 
   setBottomLabel(bottomLabel: string) {
     this._data.bottomLabel = bottomLabel;

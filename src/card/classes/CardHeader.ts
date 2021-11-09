@@ -1,8 +1,15 @@
-import BaseClass from '../../helpers/BaseClass';
 import ImageStyle from '../enums/ImageStyle';
 
-export default class CardHeader extends BaseClass {
-  public _data: any;
+export default class CardHeader {
+  public _data: { imageUrl?: string; imageStyle?: ImageStyle; title?: string; subTitle?: string };
+
+  constructor() {
+    this._data = {};
+  }
+
+  getData() {
+    return this._data;
+  }
 
   setImageStyle(imageStyle: ImageStyle) {
     this._data.imageStyle = imageStyle;

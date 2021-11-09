@@ -1,8 +1,19 @@
-import BaseClass from '../../helpers/BaseClass';
 import LoadIndicator from '../enums/LoadIndicator';
 
-export default class Action extends BaseClass {
-  public _data: any;
+export default class Action {
+  public _data: {
+    actionMethodName?: string;
+    parameters: Record<string, string>;
+    loadIndicator: LoadIndicator;
+  };
+
+  constructor() {
+    this._data = { loadIndicator: LoadIndicator.SPINNER, parameters: {} };
+  }
+
+  getData() {
+    return this._data;
+  }
 
   setFunctionName(functionName: string) {
     this._data.actionMethodName = functionName;
@@ -11,7 +22,7 @@ export default class Action extends BaseClass {
   }
 
   setLoadIndicator(loadIndicator: LoadIndicator) {
-    this._data.actionMethodName = loadIndicator;
+    this._data.loadIndicator = loadIndicator;
 
     return this;
   }

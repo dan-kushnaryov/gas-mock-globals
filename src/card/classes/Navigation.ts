@@ -1,12 +1,20 @@
-import BaseClass from '../../helpers/BaseClass';
 import Card from './Card';
 
-export default class Navigation extends BaseClass {
-  public _data: any;
+export default class Navigation {
+  public _data: {
+    cardNavigations: (
+      | { pushCard: ReturnType<Navigation['getData']> }
+      | { updateCard: ReturnType<Navigation['getData']> }
+      | { popCard: null }
+    )[];
+  };
 
   constructor() {
-    super();
-    this._data.cardNavigations = [];
+    this._data = { cardNavigations: [] };
+  }
+
+  getData() {
+    return this._data;
   }
 
   pushCard(card: Card) {

@@ -3,7 +3,20 @@ import Suggestions from './Suggestions';
 import Widget from './Widget';
 
 export default class TextInput extends Widget {
-  public _data: any;
+  public _data: {
+    text?: string;
+    hint?: string;
+    multiline?: boolean;
+    action?: Action;
+    suggestions?: Suggestions;
+    suggestionsAction?: Action;
+    title?: string;
+    value?: string;
+  } = {};
+
+  constructor() {
+    super();
+  }
 
   setFieldName(fieldName: string) {
     this._data.text = fieldName;
@@ -17,7 +30,7 @@ export default class TextInput extends Widget {
     return this;
   }
 
-  setMultiline(multiline: string) {
+  setMultiline(multiline: boolean) {
     this._data.multiline = multiline;
 
     return this;

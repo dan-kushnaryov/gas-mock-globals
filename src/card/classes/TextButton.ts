@@ -4,7 +4,15 @@ import AuthorizationAction from './AuthorizationAction';
 import Button from './Button';
 
 export default class TextButton extends Button {
-  public _data: any;
+  public _data!: { text?: string; style?: TextButtonStyle } & Button['_data'];
+
+  constructor() {
+    super();
+    this._data = {
+      style: TextButtonStyle.TEXT,
+      ...this._data,
+    };
+  }
 
   setAuthorizationAction(action: AuthorizationAction) {
     if (action instanceof AuthorizationAction === false) {

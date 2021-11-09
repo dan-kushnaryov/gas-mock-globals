@@ -2,11 +2,17 @@ import Button from './Button';
 import Widget from './Widget';
 
 export default class ButtonSet extends Widget {
-  public _data: any;
+  public _data: {
+    buttons: ReturnType<typeof Button.prototype.getData>[];
+  };
 
   constructor() {
     super();
-    this._data.buttons = [];
+    this._data = { buttons: [] };
+  }
+
+  getData() {
+    return this._data;
   }
 
   addButton(button: Button) {

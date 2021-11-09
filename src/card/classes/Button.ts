@@ -5,7 +5,23 @@ import OpenLink from './OpenLink';
 import Widget from './Widget';
 
 export default class Button extends Widget {
-  public _data: any;
+  public _data: {
+    onClick?: {
+      openLink?: ReturnType<typeof OpenLink.prototype.getData>;
+      action?:
+        | ReturnType<typeof Action.prototype.getData>
+        | ReturnType<typeof AuthorizationAction.prototype.getData>;
+    };
+  };
+
+  constructor() {
+    super();
+    this._data = {};
+  }
+
+  getData() {
+    return this._data;
+  }
 
   setAuthorizationAction(action: AuthorizationAction) {
     if (action instanceof AuthorizationAction === false) {

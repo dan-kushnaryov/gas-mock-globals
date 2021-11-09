@@ -3,7 +3,11 @@ import Button from './Button';
 import OpenLink from './OpenLink';
 
 export default class ImageButton extends Button {
-  public _data: any;
+  public _data!: { url?: string } & Button['_data'];
+
+  constructor() {
+    super();
+  }
 
   setIconUrl(url: string) {
     this._data.url = url;

@@ -1,7 +1,9 @@
-import BaseClass from '../../helpers/BaseClass';
+export default class Notification {
+  public _data: { text?: string };
 
-export default class Notification extends BaseClass {
-  public _data: any;
+  constructor() {
+    this._data = {};
+  }
 
   setText(text: string) {
     this._data.text = text;

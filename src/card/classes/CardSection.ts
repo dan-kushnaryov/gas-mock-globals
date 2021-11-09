@@ -1,14 +1,21 @@
-import BaseClass from '../../helpers/BaseClass';
 import Button from './Button';
 import ButtonSet from './ButtonSet';
 import Widget from './Widget';
 
-export default class CardSection extends BaseClass {
-  public _data: any;
+export default class CardSection {
+  public _data: {
+    collapsible?: boolean;
+    header?: string;
+    uncollapsiblewidgetsNum?: number;
+    widgets: ReturnType<ButtonSet['getData']>[];
+  };
 
   constructor() {
-    super();
-    this._data.widgets = [];
+    this._data = { widgets: [] };
+  }
+
+  getData() {
+    return this._data;
   }
 
   addWidget(widget: Widget) {

@@ -1,11 +1,7 @@
-import BaseClass from '../../helpers/BaseClass';
-
-export default class Suggestions extends BaseClass {
+export default class Suggestions {
   public _data: { autoComplete: { items: { text: string }[] } };
 
   constructor() {
-    super();
-
     this._data = {
       autoComplete: {
         items: [],
