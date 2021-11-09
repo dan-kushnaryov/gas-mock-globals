@@ -1,11 +1,12 @@
 import set from 'lodash.set';
+import TextButtonStyle from '../enums/TextButtonStyle';
 import AuthorizationAction from './AuthorizationAction';
 import Button from './Button';
 
 export default class TextButton extends Button {
   public _data: any;
 
-  setAuthorizationAction(action) {
+  setAuthorizationAction(action: AuthorizationAction) {
     if (action instanceof AuthorizationAction === false) {
       throw new Error('Invalid value passed for "setAuthorizationAction"');
     }
@@ -15,12 +16,12 @@ export default class TextButton extends Button {
     return this;
   }
 
-  setText(text) {
+  setText(text: string) {
     this._data.text = text;
     return this;
   }
 
-  setTextButtonStyle(style) {
+  setTextButtonStyle(style: TextButtonStyle) {
     this._data.style = style;
     return this;
   }

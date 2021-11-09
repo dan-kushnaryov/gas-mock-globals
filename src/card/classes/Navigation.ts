@@ -9,7 +9,7 @@ export default class Navigation extends BaseClass {
     this._data.cardNavigations = [];
   }
 
-  pushCard(card) {
+  pushCard(card: Card) {
     if (card instanceof Card === false) {
       throw new Error('Invalid value passed for "pushCard"');
     }
@@ -17,7 +17,7 @@ export default class Navigation extends BaseClass {
     return this;
   }
 
-  updateCard(card) {
+  updateCard(card: Card) {
     if (card instanceof Card === false) {
       throw new Error('Invalid value passed for "updateCard"');
     }

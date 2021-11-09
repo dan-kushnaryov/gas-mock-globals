@@ -5,25 +5,25 @@ import Widget from './Widget';
 export default class TextInput extends Widget {
   public _data: any;
 
-  setFieldName(fieldName) {
+  setFieldName(fieldName: string) {
     this._data.text = fieldName;
 
     return this;
   }
 
-  setHint(hint) {
+  setHint(hint: string) {
     this._data.hint = hint;
 
     return this;
   }
 
-  setMultiline(multiline) {
+  setMultiline(multiline: string) {
     this._data.multiline = multiline;
 
     return this;
   }
 
-  setOnChangeAction(action) {
+  setOnChangeAction(action: Action) {
     if (action instanceof Action === false) {
       throw new Error('Invalid value passed for "setOnChangeAction"');
     }
@@ -33,7 +33,7 @@ export default class TextInput extends Widget {
     return this;
   }
 
-  setSuggestions(suggestions) {
+  setSuggestions(suggestions: Suggestions) {
     if (suggestions instanceof Suggestions === false) {
       throw new Error('Invalid value passed for "setSuggestionsAction"');
     }
@@ -43,7 +43,7 @@ export default class TextInput extends Widget {
     return this;
   }
 
-  setSuggestionsAction(suggestionsAction) {
+  setSuggestionsAction(suggestionsAction: Action) {
     if (suggestionsAction instanceof Action === false) {
       throw new Error('Invalid value passed for "setSuggestionsAction"');
     }
@@ -53,13 +53,13 @@ export default class TextInput extends Widget {
     return this;
   }
 
-  setTitle(title) {
+  setTitle(title: string) {
     this._data.title = title;
 
     return this;
   }
 
-  setValue(value) {
+  setValue(value: string) {
     this._data.value = value;
 
     return this;

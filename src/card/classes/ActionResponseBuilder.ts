@@ -1,4 +1,6 @@
 import ActionResponse from './ActionResponse';
+import Navigation from './Navigation';
+import Notification from './Notification';
 
 export default class ActionResponseBuilder {
   public _actionResponse: any;
@@ -7,12 +9,12 @@ export default class ActionResponseBuilder {
     this._actionResponse = new ActionResponse();
   }
 
-  setNavigation(navigation) {
+  setNavigation(navigation: Navigation) {
     this._actionResponse.setNavigation(navigation);
     return this;
   }
 
-  setNotification(notification) {
+  setNotification(notification: Notification) {
     this._actionResponse.setNotification(notification);
     return this;
   }

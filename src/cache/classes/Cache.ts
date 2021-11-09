@@ -1,37 +1,37 @@
 export default class Cache {
-  public _data: any;
+  public _data: Record<string, string>;
 
   constructor() {
     this._data = {};
   }
 
-  get(key) {
+  get(key: string) {
     return this._data[key] || null;
   }
 
-  getAll(keys = []) {
+  getAll(keys: string[] = []) {
     if (!keys.length) return this._data;
 
     return this._filterByKeys((key) => keys.includes(key));
   }
 
-  put(key, value) {
+  put(key: string, value: string) {
     this._data[key] = value;
   }
 
-  putAll(values = {}) {
+  putAll(values: Record<string, string> = {}) {
     this._data = Object.assign(this._data, values);
   }
 
-  remove(key) {
+  remove(key: string) {
     delete this._data[key];
   }
 
-  removeAll(keys = []) {
+  removeAll(keys: string[] = []) {
     this._data = this._filterByKeys((key) => !keys.includes(key));
   }
 
-  _filterByKeys(filerFn) {
+  _filterByKeys(filerFn: (key: string) => boolean) {
     return Object.assign(
       {},
       ...Object.keys(this._data)

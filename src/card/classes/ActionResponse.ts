@@ -5,14 +5,14 @@ import Notification from './Notification';
 export default class ActionResponse extends BaseClass {
   public _data: any;
 
-  setNavigation(navigation) {
+  setNavigation(navigation: Navigation) {
     if (navigation instanceof Navigation === false) {
       throw new Error('Invalid value passed for "setNavigation"');
     }
     Object.assign(this._data, navigation.getData());
   }
 
-  setNotification(notification) {
+  setNotification(notification: Notification) {
     if (notification instanceof Notification === false) {
       throw new Error('Invalid value passed for "setNotification"');
     }

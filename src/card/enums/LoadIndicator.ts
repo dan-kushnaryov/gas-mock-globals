@@ -1,4 +1,6 @@
-module.exports = {
-  SPINNER: 'SPINNER',
-  NONE: 'NONE',
-};
+enum LoadIndicator {
+  SPINNER = 'SPINNER',
+  NONE = 'NONE',
+}
+
+export default LoadIndicator;

@@ -8,25 +8,25 @@ export default class SelectionInput extends Widget {
     this._data.items = [];
   }
 
-  addItem(text, value, selected) {
+  addItem(text: string, value: string, selected: boolean) {
     this._data.items.push({ text, value, selected });
 
     return this;
   }
 
-  setFieldName(fieldName) {
+  setFieldName(fieldName: string) {
     this._data.text = fieldName;
 
     return this;
   }
 
-  setTitle(title) {
+  setTitle(title: string) {
     this._data.title = title;
 
     return this;
   }
 
-  setType(type) {
+  setType(type: SelectionInputType) {
     this._data.type = type;
 
     return this;

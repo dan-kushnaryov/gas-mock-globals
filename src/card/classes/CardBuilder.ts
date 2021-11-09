@@ -1,4 +1,5 @@
 import Card from './Card';
+import CardAction from './CardAction';
 
 export default class CardBuilder {
   public _card: any;
@@ -7,7 +8,7 @@ export default class CardBuilder {
     this._card = new Card();
   }
 
-  addCardAction(cardAction) {
+  addCardAction(cardAction: CardAction) {
     this._card.addCardAction(cardAction);
 
     return this;

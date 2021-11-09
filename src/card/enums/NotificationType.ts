@@ -1,5 +1,7 @@
-module.exports = {
-  INFO: 'INFO',
-  ERROR: 'ERROR',
-  WARNING: 'WARNING',
-};
+enum NotificationType {
+  INFO = 'INFO',
+  ERROR = 'ERROR',
+  WARNING = 'WARNING',
+}
+
+export default NotificationType;

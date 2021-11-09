@@ -1,6 +1,7 @@
 export default class UrlFetchAppStubConfiguration {
-  public requests: any;
-  public currentUrl: any;
+  public requests: { url: string; response?: unknown }[];
+
+  public currentUrl: string;
 
   constructor() {
     // requests array has all the URLs with their specific responses
@@ -10,7 +11,7 @@ export default class UrlFetchAppStubConfiguration {
     this.currentUrl = '';
   }
 
-  when(url) {
+  when(url: string) {
     this.currentUrl = url;
     // const data = this.get(this.currentUrl)
     // if (!data) {
@@ -19,14 +20,16 @@ export default class UrlFetchAppStubConfiguration {
     return this;
   }
 
-  return(response) {
+  return(response: unknown) {
     const data = this.get(this.currentUrl);
-    data.response = response;
+    if (data) {
+      data.response = response;
+    }
     this.currentUrl = '';
     return this;
   }
 
-  get(url) {
+  get(url: string) {
     return this.requests.find((r) => r.url === url);
   }
 

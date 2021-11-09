@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
-import { dummyFunction, getGmailCard, doesUserSpeakEnglish } from './code';
 import '../src';
+import Session from '../src/base/classes/Session';
+import { doesUserSpeakEnglish, dummyFunction, getGmailCard } from './code';
 
 test('Function which uses Apps Script services under the hood', () => {
   expect(dummyFunction()).toBe("i'm dummy");

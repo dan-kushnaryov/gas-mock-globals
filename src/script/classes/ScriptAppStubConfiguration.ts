@@ -1,5 +1,6 @@
 export default class ScriptAppStubConfiguration {
   public _scriptId: any;
+
   public _oauthToken: any;
 
   constructor() {

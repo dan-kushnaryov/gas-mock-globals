@@ -2,6 +2,7 @@ import Blob from '../../base/classes/Blob';
 
 export default class HttpResponse {
   public statusCode: any;
+
   public context: any;
 
   constructor() {
@@ -22,7 +23,7 @@ export default class HttpResponse {
     };
   }
 
-  getAs(contentType) {
+  getAs(contentType: string) {
     return new Blob();
   }
 
@@ -34,7 +35,7 @@ export default class HttpResponse {
     return this.context;
   }
 
-  setContentText(context) {
+  setContentText(context: string) {
     this.context = context;
     return this;
   }
@@ -43,7 +44,7 @@ export default class HttpResponse {
     return this.statusCode;
   }
 
-  setResponseCode(statusCode) {
+  setResponseCode(statusCode: string) {
     this.statusCode = statusCode;
     return this;
   }

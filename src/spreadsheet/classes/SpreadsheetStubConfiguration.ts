@@ -1,5 +1,6 @@
 export default class SpreadsheetStubConfiguration {
   public _timezone: any;
+
   public _locale: any;
 
   constructor() {

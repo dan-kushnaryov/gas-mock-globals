@@ -6,7 +6,7 @@ import OpenLink from './OpenLink';
 export default class CardAction extends BaseClass {
   public _data: any;
 
-  setOpenLink(openLink) {
+  setOpenLink(openLink: OpenLink) {
     if (openLink instanceof OpenLink === false) {
       throw new Error('Invalid value passed for "setOpenLink"');
     }
@@ -16,13 +16,13 @@ export default class CardAction extends BaseClass {
     return this;
   }
 
-  setText(text) {
+  setText(text: string) {
     this._data.actionLabel = text;
 
     return this;
   }
 
-  setOnClickAction(action) {
+  setOnClickAction(action: Action) {
     if (action instanceof Action === false) {
       throw new Error('Invalid value passed for "setOnClickAction"');
     }

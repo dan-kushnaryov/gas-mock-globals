@@ -1,4 +1,6 @@
-module.exports = {
-  FILLED: 'FILLED',
-  TEXT: 'TEXT',
-};
+enum TextButtonStyle {
+  FILLED = 'FILLED',
+  TEXT = 'TEXT',
+}
+
+export default TextButtonStyle;

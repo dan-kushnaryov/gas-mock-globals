@@ -5,6 +5,7 @@ import CardSection from './CardSection';
 
 export default class Card extends BaseClass {
   public _data: any;
+
   public getData: any;
 
   constructor() {
@@ -20,7 +21,7 @@ export default class Card extends BaseClass {
     return this;
   }
 
-  setHeader(header) {
+  setHeader(header: CardHeader) {
     if (header instanceof CardHeader === false) {
       throw new Error('Invalid value passed for "setHeader"');
     }
@@ -30,7 +31,7 @@ export default class Card extends BaseClass {
     return this;
   }
 
-  addSection(section) {
+  addSection(section: CardSection) {
     if (section instanceof CardSection === false) {
       throw new Error('Invalid value passed for "addSection"');
     }
@@ -40,7 +41,7 @@ export default class Card extends BaseClass {
     return this;
   }
 
-  addCardAction(cardAction) {
+  addCardAction(cardAction: CardAction) {
     if (cardAction instanceof CardAction === false) {
       throw new Error('Invalid value passed for "addCardAction"');
     }

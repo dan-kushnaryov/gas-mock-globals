@@ -5,13 +5,13 @@ import OpenLink from './OpenLink';
 export default class ImageButton extends Button {
   public _data: any;
 
-  setIconUrl(url) {
+  setIconUrl(url: string) {
     this._data.url = url;
 
     return this;
   }
 
-  setOpenLink(openLink) {
+  setOpenLink(openLink: OpenLink) {
     if (openLink instanceof OpenLink === false) {
       throw new Error('Invalid value passed for "setOpenLink"');
     }

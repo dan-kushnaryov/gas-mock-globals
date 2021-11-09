@@ -1,4 +1,4 @@
-let data = {};
+let data: Record<string, string> = {};
 
 export default class Properties {
   deleteAllProperties() {
@@ -7,7 +7,7 @@ export default class Properties {
     return this;
   }
 
-  deleteProperty(key) {
+  deleteProperty(key: string) {
     delete data[key];
 
     return this;
@@ -21,7 +21,7 @@ export default class Properties {
     return data;
   }
 
-  getProperty(key) {
+  getProperty(key: string) {
     return data[key] || null;
   }
 
@@ -31,7 +31,7 @@ export default class Properties {
     return this;
   }
 
-  setProperty(key, value) {
+  setProperty(key: string, value: string) {
     data[key] = value;
 
     return this;

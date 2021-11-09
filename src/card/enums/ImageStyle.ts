@@ -1,4 +1,6 @@
-module.exports = {
-  SQUARE: 'SQUARE',
-  CIRCLE: 'CIRCLE',
-};
+enum ImageStyle {
+  SQUARE = 'SQUARE',
+  CIRCLE = 'CIRCLE',
+}
+
+export default ImageStyle;

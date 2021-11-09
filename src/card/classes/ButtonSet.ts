@@ -9,7 +9,7 @@ export default class ButtonSet extends Widget {
     this._data.buttons = [];
   }
 
-  addButton(button) {
+  addButton(button: Button) {
     if (button instanceof Button === false) {
       throw new Error('Invalid value passed for "addButton"');
     }

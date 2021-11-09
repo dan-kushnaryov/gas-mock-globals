@@ -3,6 +3,7 @@ import OpenLink from './OpenLink';
 
 export default class UniversalActionResponseBuilder extends BaseClass {
   public getData: any;
+
   public _data: any;
 
   build() {
@@ -15,7 +16,7 @@ export default class UniversalActionResponseBuilder extends BaseClass {
     return this;
   }
 
-  setOpenLink(openLink) {
+  setOpenLink(openLink: OpenLink) {
     if (openLink instanceof OpenLink === false) {
       throw new Error('Invalid value passed for "setOpenLink"');
     }

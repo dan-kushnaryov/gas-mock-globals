@@ -7,13 +7,13 @@ import Widget from './Widget';
 export default class KeyValue extends Widget {
   public _data: any;
 
-  setBottomLabel(bottomLabel) {
+  setBottomLabel(bottomLabel: string) {
     this._data.bottomLabel = bottomLabel;
 
     return this;
   }
 
-  setButton(button) {
+  setButton(button: Button) {
     if (button instanceof Button === false) {
       throw new Error('Invalid value passed for "setButton"');
     }
@@ -23,25 +23,25 @@ export default class KeyValue extends Widget {
     return this;
   }
 
-  setContent(content) {
+  setContent(content: string) {
     this._data.content = content;
 
     return this;
   }
 
-  setIconUrl(iconUrl) {
+  setIconUrl(iconUrl: string) {
     this._data.iconUrl = iconUrl;
 
     return this;
   }
 
-  setMultiline(multiline) {
+  setMultiline(multiline: string) {
     this._data.multiline = multiline;
 
     return this;
   }
 
-  setOnClickAction(onClickAction) {
+  setOnClickAction(onClickAction: Action) {
     if (onClickAction instanceof Action === false) {
       throw new Error('Invalid value passed for "setOnClickAction"');
     }
@@ -51,7 +51,7 @@ export default class KeyValue extends Widget {
     return this;
   }
 
-  setOpenLink(openLink) {
+  setOpenLink(openLink: OpenLink) {
     if (openLink instanceof OpenLink === false) {
       throw new Error('Invalid value passed for "setOpenLink"');
     }
@@ -62,7 +62,7 @@ export default class KeyValue extends Widget {
     return this;
   }
 
-  setTopLabel(topLabel) {
+  setTopLabel(topLabel: string) {
     this._data.topLabel = topLabel;
 
     return this;

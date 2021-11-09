@@ -7,7 +7,7 @@ import Widget from './Widget';
 export default class Button extends Widget {
   public _data: any;
 
-  setAuthorizationAction(action) {
+  setAuthorizationAction(action: AuthorizationAction) {
     if (action instanceof AuthorizationAction === false) {
       throw new Error('Invalid value passed for "setAuthorizationAction"');
     }

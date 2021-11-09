@@ -7,7 +7,7 @@ export default class Logger {
     return '';
   }
 
-  static log(string) {
+  static log(string: string) {
     console.log(string);
   }
 }

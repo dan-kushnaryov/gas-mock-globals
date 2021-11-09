@@ -1,10 +1,11 @@
 import BaseClass from '../../helpers/BaseClass';
 
 export default class Suggestions extends BaseClass {
-  public _data: any;
+  public _data: { autoComplete: { items: { text: string }[] } };
 
   constructor() {
     super();
+
     this._data = {
       autoComplete: {
         items: [],
@@ -20,7 +21,7 @@ export default class Suggestions extends BaseClass {
     return this;
   }
 
-  addSuggestions(suggestions = []) {
+  addSuggestions(suggestions: string[] = []) {
     suggestions.forEach((s) => this.addSuggestion(s));
 
     return this;

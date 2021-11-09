@@ -1,10 +1,20 @@
 {
+  "root": true,
+  "parserOptions": {
+    "project": [
+      "."
+    ]
+  },
+  "parser": "@typescript-eslint/parser",
   "plugins": [
     "jest",
-    "prettier"
+    "prettier",
+    "@typescript-eslint"
+    
   ],
   "extends": [
     "airbnb-base",
+    "airbnb-typescript/base",
     "standard",
     "plugin:jest/recommended",
     "prettier"
@@ -15,8 +25,8 @@
     "no-underscore-dangle": "off",
     "comma-dangle": "off",
     "class-methods-use-this": "off",
-      "prettier/prettier": [
-        "error"
-      ]
-    }
+    "prettier/prettier": [
+      "error"
+    ]
+  }
 }
